@@ -1,0 +1,44 @@
+#VRML_SIM V8.1.0 utf8
+PROTO RotorAR200 [
+  field SFVec3f translation 0 0 0
+  field SFRotation rotation 0 1 0 0
+]
+{
+  Transform {
+    translation IS translation
+    rotation IS rotation
+    children [
+      Shape {
+        appearance Appearance {
+          material Material {
+          diffuseColor 1 1 0
+          }
+        }
+        geometry Cylinder {
+          height 0.04
+          radius 0.013
+        }
+      }
+      Transform {
+        translation 0.45 0 0
+        rotation 0 0 1 1.5708
+        children [
+          Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 0.2 0.2 0.2
+              }
+            }
+            geometry Cylinder {
+              height 0.7
+              radius 0.009
+              top FALSE
+              bottom FALSE
+              subdivision 9
+            }
+          }
+        ]
+      }
+    ]
+  }  
+}

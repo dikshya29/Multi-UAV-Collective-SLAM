@@ -1,0 +1,89 @@
+#VRML_SIM V8.4.0 utf8
+WorldInfo {
+}
+Viewpoint {
+  fieldOfView 0.5
+  orientation -0.335793 -0.882995 -0.327968 1.77622
+  position -5.5257 5.8085 -4.01809
+  near 1
+}
+Background {
+  skyColor [
+    0.5 0.8 1
+  ]
+}
+Floor {
+}
+DirectionalLight {
+  direction 1 -2 -1
+}
+DirectionalLight {
+  direction -1 2 1
+}
+Pedestrian {
+  translation 4.17 1.27 -4.05
+  rotation 0 1 0 -1.618
+}
+Wall {
+  translation 3.8 0 -3
+  size 2 2.4 0.2
+}
+Wall {
+  translation 3 0 -0.36
+  size 3.6 2.4 0.2
+}
+Wall {
+  translation 1.7 0 1.1
+  size 3.6 2.4 0.2
+}
+WoodenChair {
+  translation -3.21 0 -1.44
+}
+WoodenChair {
+  translation -2.58 0 -1.44
+}
+WoodenChair {
+  translation -3.29 0 -0.22
+  rotation 0 1 0 3.14159
+}
+WoodenChair {
+  translation -2.58 0 -0.22
+  rotation 0 1 0 3.14159
+}
+PortraitPainting {
+  translation 0.4 1.485 1.23
+}
+Table {
+  translation -2.84 0 -0.82
+}
+Wall {
+  translation 0 0 -4.9
+  size 10 2.4 0.2
+}
+Wall {
+  translation -4.9 0 0
+  rotation 0 1 0 -1.5708
+  size 9.6 2.4 0.2
+}
+Wall {
+  translation 1.3 0 -3.3
+  rotation 0 1 0 -1.5708
+  size 3 2.4 0.2
+}
+Wall {
+  translation -0.2 0 -1.8
+  rotation 0 1 0 -1.5708
+  size 6 2.4 0.2
+}
+Wall {
+  translation 4.9 0 0
+  rotation 0 1 0 -1.5708
+  size 9.6 2.4 0.2
+}
+Wall {
+  translation 0 0 4.9
+  size 10 2.4 0.2
+}
+DEF DRONE Airrobot {
+  translation -1 1 -4
+}
