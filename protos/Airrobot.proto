@@ -13,7 +13,7 @@ PROTO Airrobot [
     rotation IS rotation
     children [
       Camera {
-        rotation 0 1 0 0
+        rotation 0 1 0 3.1415
         translation 0 -0.1 0
         width 512
         height 512

@@ -7,21 +7,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
+#include <vector>
 #include <iostream>
-
+#include <cmath>
 using namespace std;
 
 #define NUM_PROPS 6
+#define EPS 0.02
 
 static double time_step = -1;
 static WbDeviceTag props[NUM_PROPS];
 static double VELOCITY = 1.0;
-static double ANG_VEL = 0.1;
+static double ANG_VEL = 0.02;
+WbNodeRef drone;
 
 static const std::string EXT(".jpg");
 static string robotName;
 
+double _orientation;
 
+bool isPointingAt(double direction){
+  return abs(_orientation - (direction)) < EPS;
+}
+
+double getCurrentOrientation(){
+  const double *orientation = wb_supervisor_node_get_orientation(drone);
+  _orientation = atan2(orientation[2],orientation[8]);
+  std::cout << "orientation: "<< _orientation << std::endl;
+  return _orientation;
+}
 
 static void vec_show(int label, const char *msg, const WbVector3 v) {
   char str[128];
@@ -60,10 +74,10 @@ int main(int argc, char **argv)
   // necessary to initialize webots
   wb_robot_init();
   
-  WbNodeRef drone = wb_supervisor_node_get_from_def("DRONE1");
+  drone = wb_supervisor_node_get_from_def("DRONE1");
   WbFieldRef translationField = wb_supervisor_node_get_field(drone, "translation");
-  WbFieldRef rotationField = wb_supervisor_node_get_field(drone, "rotation");
-  cout << rotation
+  WbFieldRef rotfield = wb_supervisor_node_get_field(drone, "rotation");
+  //std::cout << rotation;
   
   time_step = wb_robot_get_basic_time_step();
   robotName = wb_robot_get_name();
@@ -93,22 +107,51 @@ int main(int argc, char **argv)
   do {
     //path[step];
     WbVector3 pos(wb_supervisor_field_get_sf_vec3f(translationField));
-    
+    double direction = 0;
     vec_show(0, "position", pos);
     
-    
     WbVector3 dir = path[step] - pos;
-    WbVector3 move = dir.normalized() * VELOCITY * time_step * 0.001;
-    WbVector3 newPos = pos + move;
-    wb_supervisor_field_set_sf_vec3f(translationField, newPos.ptr());
+    for(int i = 0; i< 3; i++) cout << dir[i] <<"#";
+    cout<<endl;
+    direction = atan2(dir[0],dir[2]);
+    getCurrentOrientation();
+    cout << "direction: "<< direction<< endl;
+    if(!isPointingAt(direction)){
+      double newOri;
+      cout << abs(direction - _orientation) << endl;
+      cout <<abs(direction-2*M_PI - _orientation) << endl;
+      if(abs(direction - _orientation) <= abs(direction-2*M_PI - _orientation)){
+      newOri = _orientation + abs(direction - _orientation )/(direction - _orientation)*ANG_VEL;
+      }
+      else{
+      newOri = _orientation - abs(direction - _orientation )/(direction - _orientation)*ANG_VEL;
+      }
+      const double rotH_values[4]={ 0, 1, 0, newOri};
+   
+      wb_supervisor_field_set_sf_rotation(rotfield, rotH_values);
+      wb_robot_step(1);
+      //getCurrentOrientation();
+      
+      //cout << "direction: "<< direction<< endl;
+      //cout << isPointingAt(direction) <<endl;
     
-    if (newPos.distance(path[step]) < 0.1) {
-      char fileName[64];
-      sprintf(fileName, "pics/%s%d.jpg", wb_robot_get_name(), step);
-      wb_camera_save_image(camera, fileName, 80);
-      cout << "saved picture: " << fileName << "\n";
-      wb_emitter_send(emitter, "p", 1);
-      step++;
+    }
+    else{
+    //drone->getField("rotation")->setSFRRotation({0,1,0,M_PI_2});
+      std::cout << std::endl;
+      WbVector3 move = dir.normalized() * VELOCITY * time_step * 0.001;
+      WbVector3 newPos = pos + move;
+      wb_supervisor_field_set_sf_vec3f(translationField, newPos.ptr());
+      
+      if (newPos.distance(path[step]) < 0.1) {
+        wb_supervisor_field_set_sf_vec3f(translationField, path[step].ptr());
+        char fileName[64];
+        sprintf(fileName, "pics/%s%d.jpg", wb_robot_get_name(), step);
+        wb_camera_save_image(camera, fileName, 80);
+        cout << "saved picture: " << fileName << "\n";
+        wb_emitter_send(emitter, "p", 1);
+        step++;
+      }
     }
   }
   while (wb_robot_step(time_step) != -1);

@@ -3,8 +3,8 @@ WorldInfo {
 }
 Viewpoint {
   fieldOfView 0.5
-  orientation -0.308129 -0.906145 -0.289753 1.69315
-  position -6.45222 5.19842 -3.74339
+  orientation -0.387083 -0.773231 -0.502275 1.76172
+  position -5.1783 7.28946 -1.995
   near 1
   follow "drone"
 }
@@ -15,11 +15,32 @@ Background {
 }
 Floor {
 }
+RoCKInShelf {
+  translation 0.25 0 -4.6
+  rotation 0 1 0 1.5708
+}
+WaterBottle {
+  hidden linearVelocity_0 -3.01101e-17 -2.65e-05 -9.27965e-17
+  hidden angularVelocity_0 -6.84112e-16 -4.82757e-17 2.34472e-16
+  translation 3.8 -0.00238902 -1.18
+  rotation -0.975838 0.106832 -0.190596 -2.12585e-16
+}
+WoodenBox {
+  translation 4.35 0.3 3.22
+}
+OilBarrel {
+  translation 0 0.44 4.47
+}
+TrafficCone {
+  translation 0.15 0 0.79
+}
 DirectionalLight {
   direction 1 -2 -1
+  castShadows TRUE
 }
 DirectionalLight {
   direction -1 2 1
+  castShadows TRUE
 }
 Pedestrian {
   translation 4.17 1.27 -4.05
@@ -76,6 +97,19 @@ Wall {
   rotation 0 1 0 -1.5708
   size 6 2.4 0.2
 }
+Carpet {
+  translation 1.69 0 2.93
+}
+Oven {
+  hidden position_0_0 -0.0592623
+  hidden linearVelocity_1 2.66688e-05 0.0180441 -0.00132278
+  hidden angularVelocity_1 -0.00410334 3.53012e-05 1.40656e-06
+  translation -0.78 0.34 -4.58
+  rotation 0 1 0 4.71239
+}
+LandscapePainting {
+  translation -2.82 1.43 -4.79
+}
 Wall {
   translation 4.9 0 0
   rotation 0 1 0 -1.5708
@@ -86,5 +120,12 @@ Wall {
   size 10 2.4 0.2
 }
 DEF DRONE1 Airrobot {
-  translation -1 1 -4
+  hidden position_0_0 1903
+  hidden position_0_1 1903
+  hidden position_0_2 1903
+  hidden position_0_3 1903
+  hidden position_0_4 1903
+  hidden position_0_5 1903
+  translation -1 1 -3.5
+  rotation 0 1 0 0
 }
