@@ -4,7 +4,7 @@ WorldInfo {
 Viewpoint {
   fieldOfView 0.5
   orientation -0.294154 -0.865431 -0.405589 1.66947
-  position -6.94508 6.8953 -1.86921
+  position -7.1121 6.59416 -2.81442
   near 1
   follow "drone"
 }
@@ -24,10 +24,8 @@ RoCKInShelf {
   rotation 0 1 0 1.5708
 }
 WaterBottle {
-  hidden linearVelocity_0 3.36977e-17 -1.81038e-06 5.69401e-17
-  hidden angularVelocity_0 2.60614e-16 4.91369e-17 -3.27418e-16
-  translation 3.8 -0.00239217 -1.18
-  rotation -0.993286 0.103433 -0.051815 -4.95366e-16
+  translation 3.8 -0.0023924 -1.18
+  rotation -0.999012 0.0242723 -0.0372335 -7.07485e-16
 }
 WoodenBox {
   translation 4.35 0.3 3.22
@@ -98,10 +96,6 @@ Carpet {
 }
 Oven {
   hidden position_0_0 -0.0591396
-  hidden translation_1 0.25 -0.150131 1.11022e-16
-  hidden rotation_1 -3.04861e-14 0 1 0.000122695
-  hidden linearVelocity_1 -1.31797e-14 -5.57631e-12 -1.29162e-08
-  hidden angularVelocity_1 -3.69032e-08 2.38593e-16 3.76561e-14
   translation -0.78 0.34 -4.58
   rotation 0 1 0 4.71239
 }
@@ -117,19 +111,8 @@ Wall {
   translation 0 0 4.9
   size 10 2.4 0.2
 }
-DEF DRONE1 Airrobot {
-  hidden position_0_0 1944.01
-  hidden position_0_1 1944.01
-  hidden position_0_2 1944.01
-  hidden position_0_3 1944.01
-  hidden position_0_4 1944.01
-  hidden position_0_5 1944.01
-  hidden rotation_4 0 -1 0 3.77625
-  hidden rotation_5 0 1 0 3.77625
-  hidden rotation_6 0 -1 0 3.77625
-  hidden rotation_7 0 1 0 3.77625
-  hidden rotation_8 0 -1 0 3.77625
-  hidden rotation_9 0 1 0 3.77625
+DEF DRONE1 Airrobot2 {
   translation -1 1 -4
   rotation 0 1 0 0
+  controller "airrobot"
 }

@@ -5,6 +5,6 @@ sceneTreePerspectives: 000000ff0000000100000002000000c00000018b01000000060100000
 minimizedPerspectives: 
 maximizedDockId: -1
 centralWidgetVisible: 1
-orthographicViewHeight: 2.65661
-textFiles: 1 "controllers/airrobot/airrobot.cpp" "protos/Airrobot.proto"
-renderingDevicePerspectives: 704;1;0.669922;0.888065;0.293513
+orthographicViewHeight: 1.10962
+textFiles: 0 "controllers/airrobot/airrobot.cpp" "protos/Airrobot.proto" "protos/Airrobot2.proto" "protos/RotorAR200.proto" "protos/PropellerAR200.proto"
+renderingDevicePerspectives: 704;1;0.310547;0.0699194;0.130587

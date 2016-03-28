@@ -12,8 +12,8 @@
 #include <cmath>
 using namespace std;
 
-#define NUM_PROPS 6
-#define EPS 0.02
+#define NUM_PROPS 4
+#define EPS 0.01
 
 
 
