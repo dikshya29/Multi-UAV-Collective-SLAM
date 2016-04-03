@@ -3,6 +3,7 @@
 #include <webots/camera.h>
 #include <webots/emitter.h>
 #include <webots/supervisor.h>
+#include <webots/distance_sensor.h>
 #include "WbVector3.hpp"
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,10 +11,13 @@
 #include <vector>
 #include <iostream>
 #include <cmath>
+#include <time.h>
 using namespace std;
 
 #define NUM_PROPS 4
 #define EPS 0.01
+
+
 
 
 
@@ -51,6 +55,8 @@ class UAV{
   WbFieldRef _rotfield;
   WbDeviceTag _camera;  
   WbDeviceTag _emitter;
+  WbDeviceTag _ds;
+  WbVector3 _heading;
   
   WbVector3 _currentPos;
   double _orientation;
@@ -72,13 +78,13 @@ class UAV{
   }
   void updatePos(){
     _currentPos = wb_supervisor_field_get_sf_vec3f(_translationField);
-  }
-  
+  } 
   
   UAV(const char *UAVDef){
     _drone = wb_supervisor_node_get_from_def(UAVDef);
     _translationField = wb_supervisor_node_get_field(_drone, "translation");
     _rotfield = wb_supervisor_node_get_field(_drone, "rotation");
+    _heading = getRandomWalk();
     
     _robotName = wb_robot_get_name();
     cout << _robotName << endl;
@@ -96,7 +102,17 @@ class UAV{
     wb_camera_enable(_camera, time_step);
     //Data emitter
     _emitter = wb_robot_get_device("emitter");
+    //DistanceSensor
+    _ds = wb_robot_get_device("ds");
+    wb_distance_sensor_enable(_ds, time_step);
   }
+  
+  bool isObstacle(){
+    double value = wb_distance_sensor_get_value(_ds);
+    bool obstacle = value < 900;
+    return obstacle;
+    }
+    
   
   //Perform a step movement to the given position on a straight line
   bool moveStep(WbVector3 &next){
@@ -132,6 +148,13 @@ class UAV{
       return false;
   }
   
+  WbVector3 getRandomWalk(){
+   //WbVector3 path(rand(), rand(), rand());
+   srand(time(NULL));
+   WbVector3 path(-10 + rand() / (RAND_MAX / (10 - (-10) + 1) + 1), 1, -10 + rand() / (RAND_MAX / (10 - (-10) + 1) + 1));
+   return path;
+    }
+  
 };
 
 
@@ -159,11 +182,16 @@ int main(int argc, char **argv)
   
   // main loop
   do {
+ //   if (myUAV.isObstacle()){
+   //   myUAV._heading = myUAV.getRandomWalk();
+     // cout << "WATCHOUT!!!!!!!!!!!!" << endl;
+      //}
+    //myUAV.moveStep(myUAV._heading);
     if (step >= length) step = 0;
+    if (myUAV.isObstacle()) step++;
     if (myUAV.moveStep(path[step])){
       step++;
      }
-   
   }
   while (wb_robot_step(time_step) != -1);
     
