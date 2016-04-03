@@ -10,12 +10,19 @@
 #include <vector>
 #include <iostream>
 #include <cmath>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/core/utility.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/imgcodecs.hpp>
+
+
 using namespace std;
 
 #define NUM_PROPS 4
 #define EPS 0.01
 
-
+using namespace cv;
 
 
 WbVector3 *readPath(const char *filename, int &size) {
@@ -89,7 +96,7 @@ class UAV{
       sprintf(name, "prop%d", i);
       _props[i] = wb_robot_get_device(name);
       wb_motor_set_position(_props[i], INFINITY);
-      wb_motor_set_velocity(_props[i], 50);
+      wb_motor_set_velocity(_props[i], 10);
     }
     //setup camera
     _camera = wb_robot_get_device("camera");
@@ -115,23 +122,38 @@ class UAV{
         newOri = _orientation - abs(direction - _orientation )/(direction - _orientation)*ANG_VEL*time_step;
       }
       const double rotH_values[4]={ 0, 1, 0, newOri};
-   
+      processImage();
       wb_supervisor_field_set_sf_rotation(_rotfield, rotH_values);
       }
       else{
       //drone->getField("rotation")->setSFRRotation({0,1,0,M_PI_2});
         WbVector3 move = dir.normalized() * VELOCITY * time_step * 0.001;
         WbVector3 newPos = _currentPos + move;
+        
         //TODO: Check Collision before moving
         wb_supervisor_field_set_sf_vec3f(_translationField, newPos.ptr());
         //Reached goal
-        if (newPos.distance(next) < 0.1) {
+        processImage();
+        if (newPos.distance(next) < 0.1) {          
+          //wb_emitter_send(emitter, "p", 1);
           return true;
         }
       }
       return false;
   }
-  
+   void processImage(){
+    char fileName[64];
+    wb_camera_get_image(_camera);
+    sprintf(fileName, "%s%d.jpg", wb_robot_get_name(), 1);
+    wb_camera_save_image(_camera, fileName, 80);
+    //cout << "saved picture: " << fileName << "\n";
+    Mat image,gray;
+    image = imread(fileName, CV_LOAD_IMAGE_COLOR);   // Read the file
+    cv::cvtColor(image,gray,CV_BGR2GRAY);
+    namedWindow( "Captured", CV_WINDOW_AUTOSIZE );
+    imshow("Captured",gray);
+    imwrite("gray.png",gray);
+  } 
 };
 
 
