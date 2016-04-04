@@ -3,8 +3,8 @@ WorldInfo {
 }
 Viewpoint {
   fieldOfView 0.5
-  orientation -0.41667 -0.786742 -0.455437 1.58187
-  position -5.97086 7.67963 6.42909
+  orientation -0.461934 -0.717483 -0.521378 1.74655
+  position -9.08733 12.6902 -0.413661
   near 1
   follow "drone"
 }
@@ -98,8 +98,6 @@ Carpet {
 }
 Oven {
   hidden position_0_0 -0.0591396
-  hidden translation_1 0.25 -0.150137 0
-  hidden rotation_1 1 0 0.000260555 -1.52659e-20
   hidden linearVelocity_1 4.55247e-26 -1.66118e-15 3.44659e-26
   hidden angularVelocity_1 9.84744e-26 9.32497e-16 -1.29982e-25
   translation -0.78 0.34 -4.58
@@ -122,11 +120,7 @@ DEF DRONE1 Airrobot2 {
   hidden position_0_1 1971.8
   hidden position_0_2 1971.8
   hidden position_0_3 1971.8
-  hidden rotation_5 0 -1 0 1.90655
-  hidden rotation_6 0 -1 0 1.23505
-  hidden rotation_7 0 1 0 3.47735
-  hidden rotation_8 0 -1 0 0.335746
-  translation -0.867198 1 4.1979
-  rotation 0 1 0 0.583185
-  controller "airrobot"
+  translation -1 1 -4
+  rotation 0 1 0 15708
+  controller "airrobot3"
 }
