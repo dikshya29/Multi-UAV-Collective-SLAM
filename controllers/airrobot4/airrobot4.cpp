@@ -12,18 +12,11 @@
 #include <iostream>
 #include <cmath>
 #include <time.h>
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/core/utility.hpp>
-#include <opencv2/imgproc.hpp>
-#include <opencv2/imgcodecs.hpp>
 
 using namespace std;
 
 #define NUM_PROPS 4
 #define EPS 0.01
-
-using namespace cv;
 
 
 

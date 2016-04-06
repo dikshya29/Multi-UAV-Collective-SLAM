@@ -11,17 +11,13 @@
 #include <vector>
 #include <iostream>
 #include <cmath>
-<<<<<<< HEAD
 #include <time.h>
-=======
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/core/utility.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/imgcodecs.hpp>
 
-
->>>>>>> origin/master
 using namespace std;
 
 #define NUM_PROPS 4
@@ -160,7 +156,6 @@ class UAV{
       }
       return false;
   }
-<<<<<<< HEAD
   
   WbVector3 getRandomWalk(){
    //WbVector3 path(rand(), rand(), rand());
@@ -169,7 +164,6 @@ class UAV{
    return path;
     }
   
-=======
    void processImage(){
     char fileName[64];
     wb_camera_get_image(_camera);
@@ -183,7 +177,6 @@ class UAV{
     imshow("Captured",gray);
     imwrite("gray.png",gray);
   } 
->>>>>>> origin/master
 };
 
 

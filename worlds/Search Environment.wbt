@@ -3,8 +3,8 @@ WorldInfo {
 }
 Viewpoint {
   fieldOfView 0.5
-  orientation -0.461934 -0.717483 -0.521378 1.74655
-  position -9.08733 12.6902 -0.413661
+  orientation 0.452999 -0.890816 -0.0351876 4.49555
+  position 60.2226 35.9782 -15.294
   near 1
   follow "drone"
 }
@@ -18,16 +18,33 @@ PointLight {
   location 0 15 0
 }
 Floor {
+  texture [
+    "textures/parquetry.jpg"
+  ]
+}
+Panel {
+  translation -1.93 0.56 4.78
+}
+CitroenCZeroSimple {
+  translation -3.63 0.4 1.53
+}
+DesktopComputer {
+  translation -0.39 0 0
+}
+Armchair {
+  translation 4.3 0 -1
+  rotation 0 1 0 3.14159
 }
 RoCKInShelf {
   translation 0.25 0 -4.6
   rotation 0 1 0 1.5708
 }
+PottedTree {
+  translation -4.54 0 -2.13
+}
 WaterBottle {
-  hidden linearVelocity_0 6.57361e-17 -5.91771e-07 -8.31377e-17
-  hidden angularVelocity_0 -5.53805e-16 7.42986e-17 -5.27068e-16
-  translation 3.8 -0.00239232 -1.18
-  rotation -0.999962 -0.00587357 0.00643194 -8.66315e-16
+  translation 4.05 0.697804 -1.45
+  rotation -0.994469 -0.0196097 -0.103183 -1.25162e-15
 }
 WoodenBox {
   translation 4.35 0.3 3.22
@@ -36,7 +53,14 @@ OilBarrel {
   translation 0 0.44 4.47
 }
 TrafficCone {
-  translation 0.15 0 0.79
+  translation 0.14 0 0.79
+}
+LandscapePainting {
+  translation -0.08 1.33 -1.93
+  rotation 0 1 0 1.5708
+  textureUrl [
+    "/Users/gasoto/Downloads/van.jpg"
+  ]
 }
 Pedestrian {
   translation 4.17 1.27 -4.05
@@ -45,61 +69,136 @@ Pedestrian {
 Wall {
   translation 3.8 0 -3
   size 2 2.4 0.2
+  wallTextureUrl [
+    "textures/red_brick_wall.jpg"
+  ]
 }
 Wall {
   translation 3 0 -0.36
   size 3.6 2.4 0.2
+  wallTextureUrl [
+    "textures/red_brick_wall.jpg"
+  ]
+}
+PortraitPainting {
+  translation 2.53 1.185 -0.24
+  textureUrl [
+    "/Users/gasoto/Downloads/mona-lisa.jpg"
+  ]
+}
+Sofa {
+  translation 2.83 0 4.29
+  rotation 0 1 0 1.5708
 }
 Wall {
   translation 1.7 0 1.1
   size 3.6 2.4 0.2
+  wallTextureUrl [
+    "textures/red_brick_wall.jpg"
+  ]
+}
+Cabinet {
+  hidden translation_6 -0.17 1.06997 0.500039
+  hidden rotation_6 -0.998367 1.09133e-07 0.057128 -1.31091e-05
+  hidden position_6_0 -8.46879e-06
+  hidden translation_7 1.02864e-11 -2.96547e-05 1.6857e-06
+  hidden rotation_7 0.0183052 0.797814 0.602626 -1.0615e-05
+  hidden translation_10 0.2 1.06997 0.50004
+  hidden rotation_10 0.998819 6.46232e-08 0.0485811 1.31031e-05
+  hidden position_10_0 7.25841e-06
+  hidden translation_11 -1.12901e-11 -2.93014e-05 1.22817e-06
+  hidden rotation_11 -0.0214201 0.800158 0.599407 9.07121e-06
+  hidden translation_14 0.285 0.569968 0.50015
+  hidden rotation_14 -1 1.68238e-11 -2.36961e-09 -1.31982e-05
+  hidden position_14_0 7.13517e-06
+  hidden translation_15 0 -3.20815e-05 7.13516e-06
+  hidden rotation_15 1 6.73231e-11 -4.9472e-12 6.59485e-06
+  hidden translation_22 0.115 0.369968 0.50015
+  hidden rotation_22 -1 1.68238e-11 -2.36739e-09 -1.31982e-05
+  hidden position_22_0 7.13659e-06
+  hidden translation_23 4.44089e-16 -3.20815e-05 7.13658e-06
+  hidden rotation_23 1 1.6819e-11 -1.28618e-12 6.59487e-06
+  hidden translation_30 0.285 0.369968 0.50015
+  hidden rotation_30 -1 8.41191e-12 -2.36979e-09 -1.31982e-05
+  hidden position_30_0 7.13516e-06
+  hidden translation_31 -4.44089e-16 -3.20815e-05 7.13515e-06
+  hidden rotation_31 1 1.68191e-11 7.16224e-12 6.59486e-06
+  hidden translation_38 -5.50284e-10 0.149934 0.50015
+  hidden rotation_38 -1 1.61139e-11 -2.35651e-09 -2.75594e-05
+  hidden position_38_0 1.90075e-05
+  hidden translation_39 -4.44089e-16 -6.67859e-05 1.90074e-05
+  hidden rotation_39 -1 8.09465e-12 6.27317e-12 -1.37709e-05
+  translation 1.37 0 -2.68
+  rotation 0 1 0 1.5708
+}
+PortraitPainting {
+  translation 4.77 1.495 1.55
+  rotation 0 1 0 4.71239
+  textureUrl [
+    "/Users/gasoto/Downloads/aNnRVK3_460s.jpg"
+  ]
 }
 WoodenChair {
   translation -3.21 0 -1.44
 }
 WoodenChair {
-  translation -2.58 0 -1.44
+  translation -3.96 0 -1.44
 }
 WoodenChair {
   translation -3.29 0 -0.22
   rotation 0 1 0 3.14159
 }
 WoodenChair {
-  translation -2.58 0 -0.22
+  translation -4.04 0 -0.220004
   rotation 0 1 0 3.14159
 }
 PortraitPainting {
   translation 0.4 1.485 1.23
 }
+WoodenPalletStack {
+  translation -1.06 0.01 -3.73
+}
 Table {
-  translation -2.84 0 -0.82
+  translation -3.7 0 -0.9
 }
 Wall {
   translation 0 0 -4.9
   size 10 2.4 0.2
+  wallTextureUrl [
+    "textures/red_brick_wall.jpg"
+  ]
 }
 Wall {
   translation -4.9 0 0
-  rotation 0 1 0 -1.5708
+  rotation 0 -1 0 1.5708
   size 9.6 2.4 0.2
+  wallTextureUrl [
+    "textures/red_brick_wall.jpg"
+  ]
 }
 Wall {
   translation 1.3 0 -3.3
   rotation 0 1 0 -1.5708
   size 3 2.4 0.2
+  wallTextureUrl [
+    "textures/red_brick_wall.jpg"
+  ]
 }
 Wall {
   translation -0.2 0 -1.8
-  rotation 0 1 0 -1.5708
+  rotation 9.58976e-09 1 9.58979e-09 4.71239
   size 6 2.4 0.2
+  wallTextureUrl [
+    "textures/red_brick_wall.jpg"
+  ]
 }
 Carpet {
   translation 1.69 0 2.93
 }
 Oven {
-  hidden position_0_0 -0.0591396
-  hidden linearVelocity_1 4.55247e-26 -1.66118e-15 3.44659e-26
-  hidden angularVelocity_1 9.84744e-26 9.32497e-16 -1.29982e-25
+  hidden position_0_0 0.000575075
+  hidden translation_1 0.248336 -0.147124 1.26347e-06
+  hidden rotation_1 -2.046e-05 -0.000423202 1 0.0597124
   translation -0.78 0.34 -4.58
   rotation 0 1 0 4.71239
 }
@@ -110,17 +209,30 @@ Wall {
   translation 4.9 0 0
   rotation 0 1 0 -1.5708
   size 9.6 2.4 0.2
+  wallTextureUrl [
+    "textures/red_brick_wall.jpg"
+  ]
 }
 Wall {
   translation 0 0 4.9
   size 10 2.4 0.2
+  wallTextureUrl [
+    "textures/red_brick_wall.jpg"
+  ]
+}
+LandscapePainting {
+  translation 1.36 1.59 4.77
+  rotation 0 1 0 3.14159
+  textureUrl [
+    "/Users/gasoto/Downloads/monet-gardens-1-xlarge_trans++4mvOqcH8RNHsTxP15XLyX1Vse9JsN00kzbUr3IXHaGo.jpg"
+  ]
 }
 DEF DRONE1 Airrobot2 {
   hidden position_0_0 1971.8
   hidden position_0_1 1971.8
   hidden position_0_2 1971.8
   hidden position_0_3 1971.8
-  translation -1 1 -4
+  translation -1 1.43 -4
   rotation 0 1 0 15708
-  controller "airrobot3"
+  controller "airrobot4"
 }
