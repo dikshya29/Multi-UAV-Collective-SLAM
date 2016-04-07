@@ -3,8 +3,8 @@ WorldInfo {
 }
 Viewpoint {
   fieldOfView 0.5
-  orientation 0.452999 -0.890816 -0.0351876 4.49555
-  position 60.2226 35.9782 -15.294
+  orientation -0.359751 0.773467 0.52185 2.95698
+  position -16.9638 63.0113 -33.9629
   near 1
   follow "drone"
 }
@@ -20,6 +20,13 @@ PointLight {
 Floor {
   texture [
     "textures/parquetry.jpg"
+  ]
+}
+PortraitPainting {
+  translation 0.740007 1.475 0.97
+  rotation 0 1 0 3.1416
+  textureUrl [
+    "/Users/gasoto/Downloads/Claude_Monet_023.jpg"
   ]
 }
 Panel {
@@ -43,8 +50,10 @@ PottedTree {
   translation -4.54 0 -2.13
 }
 WaterBottle {
+  hidden linearVelocity_0 -2.81908e-16 -2.96333e-07 -2.91775e-17
+  hidden angularVelocity_0 -1.62884e-16 -1.8106e-16 1.99875e-15
   translation 4.05 0.697804 -1.45
-  rotation -0.994469 -0.0196097 -0.103183 -1.25162e-15
+  rotation -0.498226 0.863288 -0.0806499 -3.60511e-15
 }
 WoodenBox {
   translation 4.35 0.3 3.22
@@ -56,7 +65,7 @@ TrafficCone {
   translation 0.14 0 0.79
 }
 LandscapePainting {
-  translation -0.08 1.33 -1.93
+  translation -0.0799939 1.33 -0.28
   rotation 0 1 0 1.5708
   textureUrl [
     "/Users/gasoto/Downloads/van.jpg"
@@ -81,7 +90,20 @@ Wall {
   ]
 }
 PortraitPainting {
-  translation 2.53 1.185 -0.24
+  translation 2.13 1.215 -0.48
+  rotation 0 1 0 3.14159
+  textureUrl [
+    "/Users/gasoto/Downloads/exh_vangogh-bedroom-Amsterdam_main_480.jpg"
+  ]
+}
+PortraitPainting {
+  translation 0.51 1.455 -4.79
+  textureUrl [
+    "/Users/gasoto/Downloads/rrrrrrrMonet_Japonaise_2_highres.png"
+  ]
+}
+PortraitPainting {
+  translation 4.01 1.185 -0.24
   textureUrl [
     "/Users/gasoto/Downloads/mona-lisa.jpg"
   ]
@@ -96,40 +118,6 @@ Wall {
   wallTextureUrl [
     "textures/red_brick_wall.jpg"
   ]
-}
-Cabinet {
-  hidden translation_6 -0.17 1.06997 0.500039
-  hidden rotation_6 -0.998367 1.09133e-07 0.057128 -1.31091e-05
-  hidden position_6_0 -8.46879e-06
-  hidden translation_7 1.02864e-11 -2.96547e-05 1.6857e-06
-  hidden rotation_7 0.0183052 0.797814 0.602626 -1.0615e-05
-  hidden translation_10 0.2 1.06997 0.50004
-  hidden rotation_10 0.998819 6.46232e-08 0.0485811 1.31031e-05
-  hidden position_10_0 7.25841e-06
-  hidden translation_11 -1.12901e-11 -2.93014e-05 1.22817e-06
-  hidden rotation_11 -0.0214201 0.800158 0.599407 9.07121e-06
-  hidden translation_14 0.285 0.569968 0.50015
-  hidden rotation_14 -1 1.68238e-11 -2.36961e-09 -1.31982e-05
-  hidden position_14_0 7.13517e-06
-  hidden translation_15 0 -3.20815e-05 7.13516e-06
-  hidden rotation_15 1 6.73231e-11 -4.9472e-12 6.59485e-06
-  hidden translation_22 0.115 0.369968 0.50015
-  hidden rotation_22 -1 1.68238e-11 -2.36739e-09 -1.31982e-05
-  hidden position_22_0 7.13659e-06
-  hidden translation_23 4.44089e-16 -3.20815e-05 7.13658e-06
-  hidden rotation_23 1 1.6819e-11 -1.28618e-12 6.59487e-06
-  hidden translation_30 0.285 0.369968 0.50015
-  hidden rotation_30 -1 8.41191e-12 -2.36979e-09 -1.31982e-05
-  hidden position_30_0 7.13516e-06
-  hidden translation_31 -4.44089e-16 -3.20815e-05 7.13515e-06
-  hidden rotation_31 1 1.68191e-11 7.16224e-12 6.59486e-06
-  hidden translation_38 -5.50284e-10 0.149934 0.50015
-  hidden rotation_38 -1 1.61139e-11 -2.35651e-09 -2.75594e-05
-  hidden position_38_0 1.90075e-05
-  hidden translation_39 -4.44089e-16 -6.67859e-05 1.90074e-05
-  hidden rotation_39 -1 8.09465e-12 6.27317e-12 -1.37709e-05
-  translation 1.37 0 -2.68
-  rotation 0 1 0 1.5708
 }
 PortraitPainting {
   translation 4.77 1.495 1.55
@@ -168,6 +156,12 @@ Wall {
     "textures/red_brick_wall.jpg"
   ]
 }
+LandscapePainting {
+  translation 2.32 1.4 -4.79
+  textureUrl [
+    "/Users/gasoto/Downloads/the-starry-night-1889(1).jpg"
+  ]
+}
 Wall {
   translation -4.9 0 0
   rotation 0 -1 0 1.5708
@@ -192,15 +186,15 @@ Wall {
     "textures/red_brick_wall.jpg"
   ]
 }
+LandscapePainting {
+  translation -0.31 1.46 -1.62
+  rotation 0 1 0 4.71239
+  textureUrl [
+    "/Users/gasoto/Downloads/20140124-11361732-seaisforcookie.jpg"
+  ]
+}
 Carpet {
   translation 1.69 0 2.93
-}
-Oven {
-  hidden position_0_0 0.000575075
-  hidden translation_1 0.248336 -0.147124 1.26347e-06
-  hidden rotation_1 -2.046e-05 -0.000423202 1 0.0597124
-  translation -0.78 0.34 -4.58
-  rotation 0 1 0 4.71239
 }
 LandscapePainting {
   translation -2.82 1.43 -4.79
@@ -211,6 +205,13 @@ Wall {
   size 9.6 2.4 0.2
   wallTextureUrl [
     "textures/red_brick_wall.jpg"
+  ]
+}
+PortraitPainting {
+  translation 4.79 1.535 -2.38
+  rotation 0 1 0 4.71239
+  textureUrl [
+    "/Users/gasoto/Downloads/print-almond-branches.jpg"
   ]
 }
 Wall {
@@ -228,11 +229,11 @@ LandscapePainting {
   ]
 }
 DEF DRONE1 Airrobot2 {
-  hidden position_0_0 1971.8
-  hidden position_0_1 1971.8
-  hidden position_0_2 1971.8
-  hidden position_0_3 1971.8
-  translation -1 1.43 -4
-  rotation 0 1 0 15708
-  controller "airrobot4"
+  hidden position_0_0 6519.8
+  hidden position_0_1 6519.8
+  hidden position_0_2 6519.8
+  hidden position_0_3 6519.8
+  translation -1.02953 1.43 -3.73199
+  rotation 0 1 0 -0.0490874
+  controller "airrobot3"
 }

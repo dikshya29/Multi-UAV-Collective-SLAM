@@ -5,6 +5,6 @@ sceneTreePerspectives: 000000ff0000000100000002000000c00000018b01000000060100000
 minimizedPerspectives: 000000ff00000000fd00000001000000030000078000000138fc0100000001fc00000000000007800000011800fffffffa000000000200000002fb0000001400540065007800740045006400690074006f00720100000000ffffffff000000a900fffffffb0000000e0043006f006e0073006f006c006501000002ba000001380000006b00ffffff00000780000002b400000001000000020000000100000008fc00000000
 maximizedDockId: -1
 centralWidgetVisible: 1
-orthographicViewHeight: 9.14006
-textFiles: 5 "protos/Airrobot2.proto" "protos/RotorAR200.proto" "protos/PropellerAR200.proto" "controllers/airrobot3/airrobot3.cpp" "../../../Applications/Webots/projects/samples/demos/controllers/blimp_lis/blimp_lis.cpp" "controllers/airrobot4/airrobot4.cpp"
-renderingDevicePerspectives: 3496;1;0.15625;0.0988372;0.0500566
+orthographicViewHeight: 10.2701
+textFiles: 3 "protos/Airrobot2.proto" "protos/RotorAR200.proto" "protos/PropellerAR200.proto" "controllers/airrobot3/airrobot3.cpp" "../../../Applications/Webots/projects/samples/demos/controllers/blimp_lis/blimp_lis.cpp"
+renderingDevicePerspectives: 2546;0;0.15625;0.0325255;0.0500566;1232;467;688;450;0
