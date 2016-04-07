@@ -1,0 +1,8 @@
+prefix=/home/gasoto/Code/AdvRobotNav/controllers/airrobot3/Cv2ROS/install
+
+Name: CV2ROS
+Description: Description of CV2ROS
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/gasoto/Code/AdvRobotNav/controllers/airrobot3/Cv2ROS/install/lib 
+Requires: 
