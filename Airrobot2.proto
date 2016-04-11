@@ -1,0 +1,176 @@
+#VRML_SIM V8.1.0 utf8
+# quad-rotor
+
+PROTO Airrobot2 [
+  field SFVec3f translation -1 1 -3
+  field SFRotation rotation 0 1 0 1.5707
+  field SFString name "drone"
+  field SFString controller ""
+]
+{
+  DEF DRONE Supervisor {
+    translation IS translation
+    rotation IS rotation
+    children [
+      Camera {
+        rotation 0 1 0 3.1415
+        translation 0 -0.15 0
+        width 640
+        height 480
+        antiAliasing TRUE
+        fieldOfView 1
+      }
+      Emitter {
+        channel 1
+      }
+      DistanceSensor{
+        rotation 0 1 0 -1.5708
+        translation 0 -0.15 0
+        name "ds0"
+        numberOfRays 2
+        aperture 1
+        lookupTable [ 0    0  0,
+                      1    1000  0   ]	
+        }
+         DistanceSensor{
+        rotation 0 1 0 0
+        translation 0 -0.15 0
+        name "ds1"
+        numberOfRays 2
+        aperture 1
+        lookupTable [ 0    0  0,
+                      1    1000  0   ]	
+        }
+        DistanceSensor{
+        rotation 0 1 0 3.14
+        translation 0 -0.15 0
+        name "ds2"
+        numberOfRays 2
+        aperture 1
+        lookupTable [ 0    0  0,
+                      1    1000  0   ]	
+        }
+      GPS {
+      }
+      Transform {
+        translation 0 0.02 0
+        children [
+          Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 1 1 1
+              }
+            }
+            geometry Cylinder {
+              height 0.018
+              radius 0.075
+            }
+          }
+        ]
+      }
+      Transform {
+        translation 0 0.06 0
+        children [
+          Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 0 0 1
+              }
+            }
+            geometry Cylinder {
+              height 0.06
+              radius 0.075
+            }
+          }
+        ]
+      }
+      Transform {
+        translation 0 0.06 0
+        children [
+          Shape {
+            appearance Appearance {
+              material Material {
+              }
+            }
+            geometry Sphere {
+              radius 0.075
+            }
+          }
+        ]
+      }
+      DEF ANTENNA Transform {
+        translation 0 0.1 0.0275
+        children [
+          Shape {
+            appearance Appearance {
+              material Material {
+              }
+            }
+            geometry Cylinder {
+              height 0.1
+              radius 0.0015
+            }
+          }
+        ]
+      }
+      DEF ROTOR0 RotorAR100 {
+        translation -0.2 0.01 0.2
+        rotation 0 1 0 0.7854
+      }
+      DEF PROP0 PropellerAR100 {
+        translation -0.2 0.03 0.2
+        rotationalAxis 0 1 0
+        rotation 0 1 0 -0.7854
+        name "prop0"
+      }
+      DEF ROTOR1 RotorAR100 {
+        translation 0.2 0.01 0.2
+        rotation 0 1 0 2.3562
+      }
+      DEF PROP1 PropellerAR100 {
+        translation 0.2 0.03 0.2
+        rotationalAxis 0 -1 0
+        rotation 0 1 0 -2.3562
+        name "prop1"
+      }
+      
+      
+      DEF ROTOR2 RotorAR100 {
+        translation 0.2 0.01 -0.2
+        rotation 0 1 0 -2.3562
+      }
+      DEF PROP2 PropellerAR100 {
+        translation 0.2 0.03 -0.2
+        rotationalAxis 0 -1 0
+        rotation 0 1 0 2.3562
+        name "prop2"
+      }
+      DEF ROTOR3 RotorAR100 {
+        translation -0.2 0.01 -0.2
+        rotation 0 1 0 -0.7854
+      }
+      DEF PROP3 PropellerAR100 {
+        translation -0.2 0.03 -0.2
+        rotationalAxis 0 1 0
+        rotation 0 1 0 0.7854
+        name "prop3"
+      }
+      
+    ]
+    name IS name
+    boundingObject Group {
+      children [
+        Transform {
+          translation 0 0.05 0
+          children [
+            Cylinder {
+              height 0.1
+              radius 0.45
+            }
+          ]
+        }
+      ]
+    }
+    controller IS controller
+  }
+}
