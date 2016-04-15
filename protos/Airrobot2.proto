@@ -14,7 +14,7 @@ PROTO Airrobot2 [
     children [
       Camera {
         rotation 0 1 0 3.1415
-        translation 0 -0.15 0
+        translation 0 0.35 0
         width 640
         height 480
         antiAliasing TRUE
@@ -25,11 +25,30 @@ PROTO Airrobot2 [
       }
       DistanceSensor{
         rotation 0 1 0 -1.5708
-        translation 0 -0.15 0
-        name "ds"
+        translation 0 -0 0
+        name "ds0"
         numberOfRays 2
+        aperture 1
         lookupTable [ 0    0  0,
-                      1    1000  0   ]	
+                      10    1000  0   ]	
+        }
+         DistanceSensor{
+        rotation 0 1 0 0
+        translation 0 -0 0
+        name "ds1"
+        numberOfRays 2
+        aperture 1
+        lookupTable [ 0    0  0,
+                      10    1000  0   ]	
+        }
+        DistanceSensor{
+        rotation 0 1 0 3.14
+        translation 0 -0 0
+        name "ds2"
+        numberOfRays 2
+        aperture 1
+        lookupTable [ 0    0  0,
+                      10    1000  0   ]	
         }
       GPS {
       }
