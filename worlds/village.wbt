@@ -1,0 +1,3762 @@
+#VRML_SIM V8.4.0 utf8
+WorldInfo {
+  info [
+    "World generated using the Open Street Map to Webots importer"
+  ]
+  ERP 0.6
+  lineScale 25
+  contactProperties [
+    ContactProperties {
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+    }
+    ContactProperties {
+      material2 "CitroenCZeroWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+    }
+    ContactProperties {
+      material2 "ToyotaPriusWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.971818 -0.0720671 -0.224445 4.57248
+  position 341.628 1557.69 -324.68
+  near 3
+}
+Background {
+  skyColor [
+    0.5 0.8 1
+  ]
+}
+DEF DRONE Airrobot2 {
+  hidden position_0_0 1168.56
+  hidden position_0_1 1168.56
+  hidden position_0_2 1168.56
+  hidden position_0_3 1168.56
+  hidden rotation_7 0 -1 0 0.899827
+  hidden rotation_8 0 -1 0 2.24177
+  hidden rotation_9 0 1 0 2.47063
+  hidden rotation_10 0 1 0 0.670973
+  translation 650.35 3 -225.62
+  rotation 0 1 0 -2.35629
+  controller "ros"
+}
+Floor {
+  translation 0 -0.03 0
+  size 1600 1200
+  tileSize 5e-06 5e-06
+  texture [
+    "textures/grass.jpg"
+  ]
+}
+DirectionalLight {
+  ambientIntensity 1
+  direction -1 -2 -1
+}
+Road {
+  translation 505.83 0 -170.71
+  wayPoints [
+    -4.1 0 1.3
+    -16.59 0 5.08
+    -37.44 0 3.9
+  ]
+  startingAngle [
+    1.27
+  ]
+  splineSubdivision 8
+  texture [
+    "textures/road_no_border_line.jpg"
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+RoadIntersection {
+  translation 505.83 0 -170.71
+  rotation 0 1 0 5.8
+  startRoadsLenght 0.8
+  startRoadBorderboundingObject TRUE
+  locked FALSE
+  startRoadsTexture [
+    "textures/road_no_border_line.jpg"
+  ]
+}
+Road {
+  translation 633.51 0 -240.1
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    6.3 0 4.9
+    -13.56 0 16
+    -27 0 26
+    -47.44 0 41.06
+  ]
+  startingAngle [
+    1.31
+  ]
+  endingAngle [
+    1.31
+  ]
+  splineSubdivision 8
+}
+Road {
+  translation 580.31 0 -197.16
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    -2.17 0 0.25
+    -13.81 0 3.17
+    -35.89 0 9.01
+    -60.65 0 22.21
+    -70.4 0 25.2
+  ]
+  startingAngle [
+    1.31
+  ]
+  endingAngle [
+    1.28
+  ]
+  splineSubdivision 8
+  texture [
+    "textures/road_no_border_line.jpg"
+  ]
+}
+RoadIntersection {
+  translation 582.106 0 -197.976
+  rotation 0 1 0 5.75959
+  startRoadsLenght 0.6
+  startRoadBorder FALSE
+  startRoadsTexture [
+    "textures/road_no_border_line.jpg"
+  ]
+}
+Road {
+  translation 619.02 0 -103.92
+  roadBorderHeight -6
+  roadBorderWidth []
+  wayPoints [
+    0 5 0
+    8.71 3.5 12.09
+    14.86 2 24.18
+    14.07 0 39.01
+    -3.56 0 47.25
+    -18.24 0 47.8
+    -26.83 0 58.79
+  ]
+  startingAngle [
+    -0.534
+  ]
+  splineSubdivision 8
+  pavementTexture [
+    "textures/old_brick_wall.jpg"
+  ]
+  roadBoundingObject TRUE
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+SolidBox {
+  translation 619.082 1.5 -103.827
+  rotation 0 1 0 5.27
+  size 0.2 6 7
+  appearance Appearance {
+    material Material {
+    }
+    texture ImageTexture {
+      url [
+        "textures/old_brick_wall.jpg"
+      ]
+    }
+    textureTransform TextureTransform {
+      scale 8 8
+    }
+  }
+}
+DEF BRIDGE Road {
+  translation 611.48 0 -119.3
+  roadBorderHeight -0.7
+  roadBorderWidth []
+  wayPoints [
+    0 5 0
+    7.54 5 15.39
+  ]
+  startingAngle [
+    -0.458
+  ]
+  endingAngle [
+    -0.534
+  ]
+  splineSubdivision 8
+  pavementTexture [
+    "textures/old_brick_wall.jpg"
+  ]
+  roadBoundingObject TRUE
+}
+SolidBox {
+  translation 611.461 1.5 -119.397
+  rotation 0 1 0 5.2
+  size 0.2 6 7
+  appearance Appearance {
+    material Material {
+    }
+    texture ImageTexture {
+      url [
+        "textures/old_brick_wall.jpg"
+      ]
+    }
+    textureTransform TextureTransform {
+      scale 8 8
+    }
+  }
+}
+Road {
+  translation 117.24 0 -237.75
+  roadBorderHeight -0.3
+  roadBorderWidth []
+  wayPoints [
+    0 1.5 0
+    5.94 1.9 3.35
+    12.44 1.5 6.53
+  ]
+  startingAngle [
+    -1.021
+  ]
+  endingAngle [
+    -1.131
+  ]
+  splineSubdivision 8
+  pavementTexture [
+    "textures/old_brick_wall.jpg"
+  ]
+  roadBoundingObject TRUE
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  translation 129.68 0 -231.22
+  roadBorderHeight -1.7
+  roadBorderWidth []
+  wayPoints [
+    0 1.5 0
+    8.68 1.2 3.98
+    24.58 0 11.12
+    35.88 0 11.28
+    47.14 0 7.64
+  ]
+  startingAngle [
+    -1.131
+  ]
+  endingAngle [
+    -1.57
+  ]
+  splineSubdivision 8
+  pavementTexture [
+    "textures/old_brick_wall.jpg"
+  ]
+  roadBoundingObject TRUE
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  translation 491.9 0 -310.82
+  dashedLine [
+    FALSE
+  ]
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    0 0 -4.3
+    2.77 0 -40.04
+    6.72 0 -86.17
+    25.94 0 -123.53
+    69.6 0 -156.5
+    112.31 0 -179.58
+    176.57 0 -208.16
+    219.97 0 -210.36
+    254.04 0 -185.08
+    260.09 0 -156.5
+    248.35 0 -124.63
+    207.6 0 -42.2
+    177.17 0 6.03
+    163.1 0 45.66
+    151.11 0 72.42
+  ]
+  startingAngle [
+    -3.142
+  ]
+  endingAngle [
+    0.26
+  ]
+  splineSubdivision 8
+  texture [
+    "textures/road_no_border_line.jpg"
+  ]
+}
+Road {
+  translation 90.24 0 -317.17
+  roadBorderHeight -1.8
+  roadBorderWidth []
+  wayPoints [
+    0.2 0 35.7
+    0.12 0 47.88
+    9.74 0 69.87
+    23.07 1.3 76.74
+    26.99 1.5 79.43
+  ]
+  startingAngle [
+    0
+  ]
+  endingAngle [
+    -1.021
+  ]
+  splineSubdivision 8
+  pavementTexture [
+    "textures/old_brick_wall.jpg"
+  ]
+  roadBoundingObject TRUE
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+DEF HIGWAY_OUPUT Road {
+  translation -10.71 0 -12.36
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    -1.29 0 -0.52
+    -20.55 0 9.27
+    -50.38 0 15.86
+    -75.41 0 12.57
+    -110.68 0 9.27
+    -144 0 6.24
+    -179.8 0 10.03
+    -370.47 0 51.8
+    -502.01 0 65.01
+    -668.09 0 73.8
+    -795.57 0 84.79
+  ]
+  startingAngle [
+    1.047
+  ]
+  splineSubdivision 8
+}
+Road {
+  translation 606.73 0 -488.81
+  wayPoints [
+    3.1 0 0.4
+    15.41 0 9.78
+    23.63 0 26.1
+    29.81 0 35.42
+    38.86 0 49.41
+    51.32 0 57.18
+    57.53 0 67.29
+    55.76 0 82.05
+    48.75 0 89.05
+    33.93 0 91.77
+    14.53 0 92.93
+    2.52 0 98.76
+    -10.68 0 109.64
+    -24.7 0 123.24
+    -40.28 0 130.62
+    -52.51 0 143.45
+    -57.88 0 158.99
+    -64.83 0 167.54
+    -69.96 0 176.47
+    -79.26 0 182.3
+    -95.98 0 182.3
+    -104.71 0 178.03
+    -110.53 0 177.99
+  ]
+  startingAngle [
+    -0.45
+  ]
+  endingAngle [
+    1.57
+  ]
+  splineSubdivision 8
+  texture [
+    "textures/road_no_border_line.jpg"
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  translation -9.86 0 -28.91
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    3.15 0 -3.65
+    -16 0 -27
+    -47 0 -65
+    -70.28 0 -92.74
+    -96.5 0 -112.52
+    -133.9 0 -122.42
+    -157.31 0 -134.5
+    -202.15 0 -176.27
+    -190.6 0 -213.63
+    -109.73 0 -234.27
+    -80.68 0 -247.04
+    -18.13 0 -269.25
+    77.74 0 -284.51
+    100.1 0 -291.67
+    165.43 0 -304.96
+    205.32 0 -316.5
+    266.45 0 -323.65
+    289.86 0 -311.56
+    307.13 0 -296.18
+    327.2 0 -284.08
+    337.42 0 -264.85
+    339.2 0 -249.46
+    338.45 0 -225.06
+  ]
+  startingAngle [
+    2.62
+  ]
+  endingAngle [
+    0
+  ]
+  splineSubdivision 8
+  texture [
+    "textures/road_no_border_line.jpg"
+  ]
+}
+Road {
+  translation 200.42 0 -233.62
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    -1.99 0 -2.43
+    3.94 0 -14
+    33.28 0 -20
+    69.99 0 -15
+    113.77 0 -5.95
+  ]
+  startingAngle [
+    -2.62
+  ]
+  endingAngle [
+    -1.57
+  ]
+  splineSubdivision 8
+}
+Road {
+  translation 9.69 0 -30.12
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    3.27 0 2.84
+    29.03 0 -17.83
+    93.87 0 -28.82
+    150.87 0 -44.76
+    187.04 0 -72.23
+    213.66 0 -98.61
+    213.49 0 -142.56
+    198.58 0 -168.39
+    188.73 0 -180.98
+  ]
+  startingAngle [
+    -2.095
+  ]
+  endingAngle [
+    2.618
+  ]
+  splineSubdivision 8
+}
+Road {
+  translation 582.04 0 -194.33
+  roadBorderHeight -6
+  roadBorderWidth []
+  wayPoints [
+    1.12 0 0.32
+    5.13 0 8.37
+    10.62 0 17.5
+    17.99 0 28.48
+    20.34 0 44.15
+    23.96 3.5 64.04
+    29.44 5 75.03
+  ]
+  startingAngle [
+    -0.262
+  ]
+  endingAngle [
+    -0.458
+  ]
+  splineSubdivision 8
+  pavementTexture [
+    "textures/old_brick_wall.jpg"
+  ]
+  roadBoundingObject TRUE
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  translation 507.77 0 -168.02
+  wayPoints [
+    -0.67 0 1.42
+    0 0 9.64
+    10.8 0 48.38
+  ]
+  startingAngle [
+    -0.299
+  ]
+  splineSubdivision 8
+  texture [
+    "textures/road_no_border_line.jpg"
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  translation 603.64 0 -271.67
+  wayPoints [
+    0 0 0
+    -13.21 0 17.48
+    -20.27 0 29.53
+    -28.39 0 43.71
+    -26.7 0 55.17
+    -24.3 0 64.1
+    -22.61 0 69.73
+  ]
+  endingAngle [
+    -0.26
+  ]
+  splineSubdivision 8
+  texture [
+    "textures/road_no_border_line.jpg"
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  translation 496.07 0 -257.96
+  wayPoints [
+    -2 -0.001 -2.1
+    2.9 0 3.92
+    6.03 0 9.75
+    2.89 0 17.33
+    -3.29 0 23.59
+    -3.57 0 35.83
+    -2.17 0 50.98
+    2.93 0 68.66
+    5.71 0 77.41
+    8.47 0 83.13
+  ]
+  startingAngle [
+    -0.85
+  ]
+  endingAngle [
+    -0.301
+  ]
+  splineSubdivision 8
+  texture [
+    "textures/road_no_border_line.jpg"
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  translation 342.17 0 -240.45
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    0.82 0 0.88
+    18.81 0 2.27
+    43.21 0 2.27
+    69.48 0 3.82
+    102.88 0 2.27
+    127.03 0 -5.5
+    151.85 0 -20.27
+    159.3 0 -41.25
+    149.73 0 -66.06
+  ]
+  startingAngle [
+    -1.57
+  ]
+  endingAngle [
+    3.141
+  ]
+  splineSubdivision 8
+  texture [
+    "textures/road_no_border_line.jpg"
+  ]
+}
+DEF HIGWAY_INPPUT Road {
+  translation -810.54 0 47.56
+  roadBorderHeight -0.8
+  roadBorderWidth []
+  wayPoints [
+    0 0 0
+    119.02 0 -9.32
+    292.17 0 -21.76
+    425.64 0 -31.08
+    533.3 0 -55.95
+    608.8 0 -77.65
+    649.28 3 -101.96
+    672.67 4 -121.66
+    705.74 7 -160.51
+    721.76 7 -195.48
+    720.66 7 -228.89
+    714.14 7 -255.72
+    704.91 7 -302.98
+    695.43 4 -357.93
+    712.65 2 -417.28
+    744.91 0 -446.95
+    795.34 0 -449.15
+    838.33 0 -444.2
+    881.7 0 -427.72
+    895.66 3 -392
+    900 5 -382
+    901 6 -367
+    901 4.5 -355
+    901 0 -336
+    901 0 -329
+  ]
+  splineSubdivision 8
+  pavementTexture [
+    "textures/concrete.jpg"
+  ]
+  roadBoundingObject TRUE
+}
+RoadPillars {
+  translation -100.741 -2.84217e-13 -353.744
+  rotation 0 1 0 -0.35
+  height 2
+  width 6.5
+  pylonsDistance 4.8
+}
+RoadPillars {
+  translation -109.141 -2.84217e-13 -323.772
+  rotation 0 1 0 -0.15
+  height 3.2
+  width 6.5
+  pylonsDistance 4.8
+}
+RoadPillars {
+  translation -110.31 -2.84217e-13 -288.212
+  rotation 0 1 0 0.1
+  width 6.5
+  pylonsDistance 4.8
+}
+RoadPillars {
+  translation 90.4 -2.91322e-13 -311.539
+  height 4.6
+  width 6.5
+  pylonsDistance 4.8
+}
+RoadPillars {
+  translation 90.48 -2.91322e-13 -295.579
+  height 1.4
+  width 6.5
+  pylonsDistance 4.8
+}
+RoadPillars {
+  translation 85.6955 -2.91322e-13 -343.222
+  rotation 0 1 0 0.35
+  height 3.1
+  width 6.5
+  pylonsDistance 4.8
+}
+RoadPillars {
+  translation 89.8193 0 -327.495
+  rotation 0 1 0 0.05
+  height 4.8
+  width 6.5
+  pylonsDistance 4.8
+}
+RoadPillars {
+  translation -105.492 -2.84217e-13 -256.228
+  rotation 0 -1 0 6.13319
+  height 5.9
+  width 6.5
+  pylonsDistance 4.8
+}
+RoadPillars {
+  translation -99.0403 4.33431e-13 -222.24
+  rotation 0 -1 0 -0.2
+  height 6.3
+  width 6.5
+  pylonsDistance 4.8
+}
+RoadPillars {
+  translation -91.1207 4.33431e-13 -182.92
+  rotation 0 -1 0 -0.15
+  height 6.3
+  width 6.5
+  pylonsDistance 4.8
+}
+RoadPillars {
+  translation -92.1906 2.77112e-13 -145.244
+  rotation 0 -1 0 0.25
+  height 6.3
+  width 6.5
+  pylonsDistance 4.8
+}
+RoadPillars {
+  translation -116.796 2.77112e-13 -99.6637
+  rotation 0 -1 0 0.65
+  height 5.5
+  width 6.5
+  pylonsDistance 4.8
+}
+RoadPillars {
+  translation -140.862 2.77112e-13 -72.6996
+  rotation 0 -1 0 0.8
+  height 3.7
+  width 6.5
+  pylonsDistance 4.8
+}
+RoadPillars {
+  translation -166.177 2.77112e-13 -52.2877
+  rotation 0 -1 0 0.95
+  height 2
+  width 6.5
+  pylonsDistance 4.8
+}
+Road {
+  translation 327.53 0 -226
+  dashedLine [
+    FALSE
+  ]
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    1.06 0 0.83
+    1.88 0 39.29
+    6.87 0 80.07
+    34.54 0 107.78
+    98.9 0 122.94
+    175 0 136.8
+  ]
+  startingAngle [
+    0
+  ]
+  endingAngle [
+    -1.05
+  ]
+  splineSubdivision 8
+}
+Road {
+  translation 543.15 0 -191.41
+  wayPoints [
+    0.6 -0.001 0.9
+    -9.35 0 -23.93
+    4.18 0 -56.35
+    31.76 0 -105.49
+  ]
+  splineSubdivision 8
+  texture [
+    "textures/road_no_border_line.jpg"
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  translation 504.79 0 -87.9
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    0 0 2.61
+    -1.74 0 20.91
+    -23.06 0 69.91
+    -95.97 0 102.45
+    -230.84 0 133.5
+    -360.97 0 149.14
+    -424.17 0 153.22
+    -469.81 0 137.67
+    -488.49 0 112.41
+    -497.1 0 80.3
+  ]
+  startingAngle [
+    0
+  ]
+  endingAngle [
+    2.62
+  ]
+  splineSubdivision 8
+}
+Road {
+  translation 633.51 0 -240.1
+  dashedLine [
+    FALSE
+  ]
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    10.7 0 6.1
+    42.5 0 36.97
+    53.29 0 103.52
+    -24.97 0 130.14
+    -126.44 0 150.9
+  ]
+  startingAngle [
+    -0.785
+  ]
+  endingAngle [
+    1.05
+  ]
+  splineSubdivision 8
+}
+RoadIntersection {
+  translation 504.79 0 -87.9
+  rotation 0 -1 0 0.523599
+  roadNumber 3
+  startRoadsLenght 0.6
+  startRoadBorder FALSE
+  locked FALSE
+}
+RoadIntersection {
+  translation 642.345 -4.9738e-13 -235.867
+  rotation 0 1 0 0.261799
+  roadNumber 3
+  startRoadsLenght 0.6
+  startRoadBorder FALSE
+  locked FALSE
+}
+Road {
+  translation 491.9 0 -310.82
+  wayPoints [
+    -4.3 0 0
+    -39.24 0 -1.93
+    -81.72 0 -13.31
+    -134.58 0 -38.08
+    -168.9 0 -34.34
+    -191.98 0 -17.55
+  ]
+  startingAngle [
+    1.57
+  ]
+  endingAngle [
+    0.64
+  ]
+  splineSubdivision 8
+}
+RoadIntersection {
+  translation 491.9 0 -310.82
+  rotation 0 1 0 0.7854
+  startRoadsLenght 0.8
+}
+Roundabout {
+  translation 0.49 0 -20.08
+  rotation 0 1 0 6.02139
+  border FALSE
+  innerRadius 6.5
+  outerRadius 13.6
+  centerTextureScale 16 16
+  startRoadsLenght 0.8
+  locked FALSE
+}
+Roundabout {
+  translation 191.22 0 -223.58
+  border FALSE
+  innerRadius 6.5
+  outerRadius 13.6
+  centerTextureScale 16 16
+  roadNumber 3
+  startRoadsLenght 0.8
+}
+Roundabout {
+  translation 328.59 0 -239.57
+  rotation 0 1 0 5.49779
+  border FALSE
+  innerRadius 6.5
+  outerRadius 13.6
+  centerTextureScale 16 16
+  startRoadsLenght 0.8
+}
+GenericBuilding {
+  translation 626.25 0 -27.43
+  floorHeight 5
+  floorNumber 9
+  corners [
+    0 0
+    10.82 -11.09
+    0.23 -19.22
+    -13.58 -7.39
+  ]
+  wallType "glasses2"
+  roofType "gravel"
+  roofShape "flat roof"
+}
+Museum {
+  translation 587.657 -7.10543e-14 -39.3642
+  rotation 0 -1 0 2.2
+}
+GenericBuilding {
+  translation 606.62 0 -70.29
+  floorHeight 6
+  floorNumber 2
+  corners [
+    0 0
+    10.82 -11.09
+    0.23 -19.22
+    -13.58 -7.39
+  ]
+  wallType "building3"
+}
+GenericBuilding {
+  translation 682.89 0 -43.11
+  floorHeight 4
+  corners [
+    0 0
+    -2.74 -31.05
+    -38.96 -34.01
+    -32.78 -2.96
+  ]
+  roofHeight 4
+}
+GenericBuilding {
+  translation 622.16 0 -141.99
+  corners [
+    0 0
+    10.82 -11.09
+    0.23 -19.22
+    -13.58 -7.39
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 577.109 -2.84217e-14 -64.5763
+  corners [
+    0 0
+    3.45 -24.57
+    -34.97 -27.71
+    -32.83 0.52
+  ]
+  wallType "building1"
+  roofHeight 4
+}
+GenericBuilding {
+  translation 632.99 0 -407.71
+  corners [
+    0 0
+    9.57 -15.71
+    -8.9 -22.18
+    -18.27 -6.29
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 665.23 0 -461.21
+  corners [
+    0 0
+    9.57 -15.71
+    -8.9 -22.18
+    -18.27 -6.29
+  ]
+  wallType "glasses2"
+}
+GenericBuilding {
+  translation 688.03 0 -439.49
+  floorNumber 8
+  corners [
+    0 0
+    9.57 -15.71
+    -8.9 -22.18
+    -18.27 -6.29
+  ]
+  wallType "glasses3"
+  roofType "gravel"
+  roofShape "flat roof"
+}
+GenericBuilding {
+  translation 595.78 0 -454.1
+  corners [
+    0 0
+    9.57 -15.71
+    -8.9 -22.18
+    -18.27 -6.29
+  ]
+  wallType "brick1"
+}
+GenericBuilding {
+  translation 590.94 0 -435.97
+  corners [
+    0 0
+    7.67 -15.16
+    -8.9 -22.18
+    -18.27 -6.29
+  ]
+  wallType "building3"
+}
+GenericBuilding {
+  translation 617.58 0 -426.6
+  corners [
+    0 0
+    9.57 -15.71
+    -8.9 -22.18
+    -18.27 -6.29
+  ]
+}
+GenericBuilding {
+  translation 556.93 0 -420.58
+  corners [
+    0 0
+    7.67 -15.16
+    -8.9 -22.18
+    -18.27 -6.29
+  ]
+  wallType "brick2"
+}
+GenericBuilding {
+  translation 521.43 0 -362.3
+  corners [
+    0 0
+    7.67 -15.16
+    -8.9 -22.18
+    -18.27 -6.29
+  ]
+  wallType "brick2"
+}
+GenericBuilding {
+  translation 520.27 0 -319.99
+  corners [
+    0 0
+    7.67 -15.16
+    -8.9 -22.18
+    -18.27 -6.29
+  ]
+  wallType "brick1"
+}
+GenericBuilding {
+  translation 538.9 0 -394.72
+  corners [
+    0 0
+    7.67 -15.16
+    -8.9 -22.18
+    -18.27 -6.29
+  ]
+}
+GenericBuilding {
+  translation 535.71 0 -336.47
+  corners [
+    0 0
+    7.67 -15.16
+    -8.9 -22.18
+    -18.27 -6.29
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 553.73 0 -519.72
+  corners [
+    0 0
+    -18.5 0.02
+    -19.14 14.06
+    -10.55 14.81
+    0.67 15.79
+  ]
+  wallType "brick1"
+}
+GenericBuilding {
+  translation 527.12 0 -488.26
+  corners [
+    0 0
+    -23.74 1.04
+    -22.24 19.35
+    -0.93 20.67
+  ]
+  wallType "brick1"
+}
+GenericBuilding {
+  translation 564.36 0 -533.7
+  corners [
+    0 0
+    -16.44 -0.74
+    -16.82 13.9
+    -10.64 13.98
+    1.43 14.13
+  ]
+  wallType "brick1"
+}
+GenericBuilding {
+  translation 543.17 0 -504.92
+  corners [
+    0 0
+    -21.93 -1.29
+    -22.94 16.8
+    -16.05 16.66
+    -1.44 16.34
+  ]
+  wallType "brick1"
+}
+GenericBuilding {
+  translation 513.93 0 -468.2
+  corners [
+    0 0
+    -16.44 -0.74
+    -16.82 13.9
+    -10.64 13.98
+    1.43 14.13
+  ]
+  wallType "brick1"
+}
+GenericBuilding {
+  translation 503.29 0 -454.23
+  corners [
+    0 0
+    -18.5 0.02
+    -19.14 14.06
+    -10.55 14.81
+    0.67 15.79
+  ]
+  wallType "brick1"
+}
+GenericBuilding {
+  translation 492.74 0 -439.42
+  corners [
+    0 0
+    -21.93 -1.29
+    -22.94 16.8
+    -16.05 16.66
+    -1.44 16.34
+  ]
+  wallType "brick1"
+}
+GenericBuilding {
+  translation 476.69 0 -422.76
+  corners [
+    0 0
+    -23.74 1.04
+    -22.24 19.35
+    -0.93 20.67
+  ]
+  wallType "brick1"
+}
+GenericBuilding {
+  translation 581.26 0 -291.4
+  corners [
+    0 0
+    -7.29 13.68
+    8.39 19.59
+    13.53 5.92
+  ]
+  wallType "glasses2"
+}
+GenericBuilding {
+  translation 560.74 0 -287.7
+  corners [
+    0 0
+    7.67 -15.16
+    -8.9 -22.18
+    -18.27 -6.29
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 608.346 0 -290.272
+  corners [
+    0 0
+    -48.9 -22.18
+    -38.34 -41.04
+    14.05 -17.38
+  ]
+  wallType "glasses1"
+  roofType "gravel"
+  roofShape "flat roof"
+}
+GenericBuilding {
+  translation 548.06 0 -267.73
+  floorHeight 3.5
+  floorNumber 2
+  corners [
+    0 0
+    -13.07 -5.18
+    -20.29 -2.22
+    -31.17 -6.29
+    -35.23 1.11
+    -23.52 4.07
+    -21.56 11.46
+    -11.54 15.16
+  ]
+  wallType "arcade-style"
+  roofType "slate"
+  roofHeight 7
+}
+GenericBuilding {
+  translation 580.12 0 -260.71
+  corners [
+    0 0
+    -15.2 -4.44
+    -23.71 11.46
+    -9.41 14.79
+  ]
+  wallType "building3"
+}
+GenericBuilding {
+  translation 525.08 0 -208.21
+  corners [
+    0 0
+    2 -17.75
+    -14.42 -19.96
+    -15.99 -2.22
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 555.17 0 -234.83
+  floorNumber 2
+  corners [
+    0 0
+    -2.78 7.02
+    -8.38 6.65
+    -9.33 17.01
+    11.25 15.16
+    11.16 -0.74
+  ]
+  wallType "brick2"
+}
+GenericBuilding {
+  translation 597.507 0 -213.847
+  corners [
+    0 0
+    10.82 -11.09
+    0.23 -19.22
+    -13.58 -7.39
+  ]
+  wallType "brick1"
+}
+GenericBuilding {
+  translation 621.89 0 -245.92
+  corners [
+    0 0
+    10.74 -13.31
+    -4.6 -22.18
+    -18.31 -7.39
+  ]
+  wallType "glasses3"
+}
+GenericBuilding {
+  translation 648.05 0 -308.2
+  floorHeight 5
+  floorNumber 2
+  corners [
+    0 0
+    33.56 -52.29
+    -9.91 -79.48
+    -32.13 -52.29
+    -8.54 -37.65
+    -18.03 -12.03
+  ]
+  wallType "arcade-style"
+  roofHeight 10
+}
+GenericBuilding {
+  translation 691.38 0 -377.74
+  corners [
+    0 0
+    10.92 -19.35
+    -3.92 -26.67
+    -19.13 -8.37
+  ]
+}
+GenericBuilding {
+  translation 715.65 0 -416.44
+  corners [
+    0 0
+    -18.66 -12.55
+    -4.66 -30.85
+    -1.4 -29.81
+    5.24 -27.69
+    10.09 -26.14
+  ]
+  wallType "brick2"
+}
+GenericBuilding {
+  translation 720.89 0 -444.13
+  corners [
+    0 0
+    4.18 -9.69
+    -4.74 -12.57
+    -6.64 -2.12
+  ]
+  wallType "brick2"
+}
+GenericBuilding {
+  translation 741.26 0 -377.61
+  corners [
+    0 0
+    -11.76 -6.27
+    -1.45 -25.62
+    20.81 -14.64
+    12.96 5.75
+  ]
+  roofHeight 5
+}
+GenericBuilding {
+  translation 732.69 0 -342.06
+  floorHeight 4
+  corners [
+    0 0
+    10.42 -16.21
+    -5.05 -24.05
+    -18.4 -4.71
+  ]
+  wallType "building3"
+}
+GenericBuilding {
+  translation 712.63 0 -304.94
+  corners [
+    0 0
+    10.45 -15.16
+    -6.26 -24.05
+    -19.77 -9.41
+  ]
+}
+GenericBuilding {
+  translation 718.28 0 -285.51
+  floorHeight 4
+  corners [
+    0 0
+    -17.53 -9.98
+    -32.97 4.44
+    -12.42 14.79
+  ]
+  wallType "building3"
+}
+GenericBuilding {
+  translation 692.49 0 -253.155
+  floorHeight 8
+  corners [
+    0 0
+    -25.8 -12.94
+    -28.7 -9.61
+    -29.86 -5.55
+    -30.51 0.74
+    -29.47 6.29
+    -27.2 9.98
+    -23.98 16.27
+    -21.06 19.96
+    -17.12 22.18
+    -13.62 24.03
+    2.55 31.54
+    16.39 8.53
+  ]
+  wallType "glasses1"
+  roofType "gravel"
+  roofShape "flat roof"
+}
+GenericBuilding {
+  translation 647.79 0 -193.67
+  corners [
+    0 0
+    14.83 -11.5
+    -3.34 -27.71
+    -21.67 -11.5
+  ]
+  wallType "brick1"
+}
+GenericBuilding {
+  translation 700.38 0 -172.42
+  corners [
+    0 0
+    -5.26 -29.21
+    21.33 -31.43
+    23.13 -2.96
+  ]
+  roofHeight 4
+}
+GenericBuilding {
+  translation 627.7 0 -185.36
+  corners [
+    0 0
+    -11.98 -11.09
+    -33.74 -5.92
+    -17.6 14.05
+  ]
+  wallType "building3"
+}
+GenericBuilding {
+  translation 585.59 0 -171.31
+  floorHeight 7
+  floorNumber 2
+  corners [
+    0 0
+    -5.2 -14.42
+    -31.24 -8.5
+    -24.3 6.65
+  ]
+  wallType "arcade-style"
+  roofHeight 7
+}
+GenericBuilding {
+  translation 668.88 0 -149.5
+  corners [
+    0 0
+    -2.5 -23.66
+    -29.09 -21.44
+    -25.29 2.59
+  ]
+  roofHeight 5
+}
+GenericBuilding {
+  translation 567.11 0 -116.43
+  floorNumber 4
+  corners [
+    0 0
+    3.45 -24.57
+    -34.97 -27.71
+    -32.83 0.52
+  ]
+  wallType "glasses1"
+  roofType "gravel"
+  roofShape "flat roof"
+}
+GenericBuilding {
+  translation 735.46 0 -114.13
+  floorHeight 4
+  corners [
+    0 0
+    2.45 -36.6
+    -28.14 -41.83
+    -31.7 -2.09
+  ]
+  wallType "brick1"
+  roofHeight 6
+}
+GenericBuilding {
+  translation 481.27 0 -192.36
+  floorNumber 11
+  corners [
+    0 0
+    -1.02 -31.06
+    -33.61 -28.1
+    -34.36 1.48
+  ]
+  wallType "glasses3"
+  roofType "gravel"
+  roofShape "flat roof"
+}
+GenericBuilding {
+  translation 500.96 0 -116.94
+  corners [
+    0 0
+    -2.74 -31.06
+    -38.96 -34.01
+    -32.78 -2.96
+  ]
+  wallType "brick1"
+}
+GenericBuilding {
+  translation 416.1 0 -186.44
+  corners [
+    0 0
+    2.71 -22.18
+    -5.48 -23.01
+    -17.17 -24.19
+    -26.63 -25.14
+    -29.42 -5.18
+  ]
+  wallType "brick2"
+}
+GenericBuilding {
+  translation 410.62 0 -209.45
+  corners [
+    0 0
+    2.18 -11.74
+    -10.37 -14.33
+    -11.69 -1.18
+  ]
+  wallType "brick2"
+}
+GenericBuilding {
+  translation 447.37 0 -267.7
+  corners [
+    0 0
+    0.52 -6.87
+    1.27 -16.73
+    -19.44 -17.78
+    -19.74 -9.7
+    -20.09 -0.52
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 447.9 0 -274.58
+  corners [
+    0 0
+    -0.88 15.96
+    17.41 16.51
+    17.26 8.18
+    17.14 1.72
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 465.16 0 -266.39
+  corners [
+    0 0
+    -0.24 -16.81
+    16.77 -16.07
+    17.3 0.01
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 427.63 0 -277.41
+  corners [
+    0 0
+    0.33 -19.6
+    -20.68 -20.65
+    -20.15 -13.84
+    -19.66 -7.5
+    -19.11 -0.52
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 407.48 0 -291.25
+  corners [
+    0 0
+    -0.93 -18.83
+    -23.51 -21.19
+    -22.9 -15.09
+    -21.7 -3.15
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 384.58 0 -306.34
+  corners [
+    0 0
+    -1.27 -18.59
+    -18.94 -19.37
+    -15.56 0.23
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 407.97 0 -284.91
+  corners [
+    0 0
+    1.27 17.56
+    -15.95 17.01
+    -16.22 11.05
+    -16.71 0.55
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 391.75 0 -273.86
+  corners [
+    0 0
+    0.75 15.94
+    -16.88 16.2
+    -16.86 8.88
+    -16.83 -0.79
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 374.89 0 -264.98
+  corners [
+    0 0
+    0.25 15.69
+    -17.72 14.64
+    -17.98 -2.35
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 309 0 -257.64
+  floorHeight 4
+  floorNumber 4
+  corners [
+    0 0
+    0.25 -18.49
+    -31.14 -18.49
+    -30.11 0
+  ]
+  wallType "construction"
+  roofType "gravel"
+  roofShape "flat roof"
+}
+GenericBuilding {
+  translation 291.89 0 -297.01
+  floorNumber 8
+  corners [
+    0 0
+    -0.52 -15.69
+    -23.66 -16.73
+    -20.51 5.23
+  ]
+  wallType "glasses2"
+  roofType "gravel"
+  roofShape "flat roof"
+}
+GenericBuilding {
+  translation 250.15 0 -308.51
+  corners [
+    0 0
+    -2.04 -25.1
+    -32.45 -25.1
+    -31.66 -1.05
+  ]
+  wallType "building3"
+}
+GenericBuilding {
+  translation 250.31 0 -266.69
+  corners [
+    0 0
+    0.56 -19.87
+    -34.75 -20.91
+    -35 8.37
+  ]
+}
+GenericBuilding {
+  translation 306.07 0 -198.71
+  floorHeight 4
+  corners [
+    0 0
+    0.29 -28.23
+    -50.8 -28.23
+    -49.8 2.09
+  ]
+  wallType "building3"
+  roofHeight 4
+}
+GenericBuilding {
+  translation 303.82 0 -174.66
+  floorHeight 5
+  floorNumber 2
+  corners [
+    0 0
+    -43.79 0
+    -39.88 63.26
+    -28.94 63.26
+    -28.49 67.71
+    -27.12 72.15
+    -24 74.77
+    -19.44 74.77
+    -14.6 73.72
+    -11.98 70.32
+    -11.59 63.53
+    3.02 64.05
+  ]
+  wallType "arcade-style"
+  roofType "slate"
+  roofHeight 5
+}
+GenericBuilding {
+  translation 466.07 0 -335.53
+  corners [
+    0 0
+    0.14 -14.12
+    -16.9 -14.64
+    -16.73 -9.33
+    -16.39 1.05
+  ]
+}
+GenericBuilding {
+  translation 449.34 0 -344.85
+  corners [
+    0 0
+    -0.82 -15.9
+    -17.19 -16.64
+    -17.69 -9.27
+    -18.35 0.37
+  ]
+}
+GenericBuilding {
+  translation 431.64 0 -354.12
+  corners [
+    0 0
+    0.56 -18.83
+    -20.55 -19.94
+    -20.08 -14.02
+    -19.09 -1.46
+  ]
+}
+GenericBuilding {
+  translation 411.56 0 -368.14
+  corners [
+    0 0
+    -2.24 -20.42
+    -23.49 -19.38
+    -24.11 -1.08
+  ]
+}
+GenericBuilding {
+  translation 560.64 0 -389.74
+  corners [
+    0 0
+    0.65 -32.54
+    29.9 -32.54
+    29.29 1.48
+  ]
+  wallType "glasses1"
+  roofType "gravel"
+  roofShape "flat roof"
+}
+GenericBuilding {
+  translation 71.2 0 -233.46
+  floorHeight 5
+  corners [
+    0 0
+    -1.38 -41.83
+    -42.77 -42.87
+    -37.85 -4.18
+  ]
+  wallType "brick1"
+}
+GenericBuilding {
+  translation 160.98 0 -277.38
+  floorNumber 4
+  corners [
+    0 0
+    1.23 -36.6
+    -31.62 -36.6
+    -27.94 1.05
+  ]
+  wallType "building1"
+}
+GenericBuilding {
+  translation 176.59 0 -172.81
+  corners [
+    0 0
+    1.43 -30.33
+    -41.14 -30.33
+    -46.29 -2.09
+  ]
+  wallType "brick2"
+  roofHeight 5
+}
+GenericBuilding {
+  translation 6.62 0 -236.6
+  floorNumber 10
+  corners [
+    0 0
+    -3.4 -29.28
+    -34.92 -26.14
+    -31.32 9.41
+  ]
+  wallType "glasses4"
+  roofType "gravel"
+  roofShape "flat roof"
+}
+GenericBuilding {
+  translation 12.3 0 -174.9
+  corners [
+    0 0
+    1.37 -32.42
+    -29.04 -32.42
+    -25.58 -1.05
+  ]
+  wallType "building1"
+  roofHeight 5
+}
+GenericBuilding {
+  translation 293.26 0 -361.04
+  corners [
+    0 0
+    -0.69 -20.91
+    -25.05 -21.96
+    -25.55 0
+  ]
+  wallType "brick2"
+}
+DEF TRAFFIC_LIGHT Robot {
+  translation 488.241 5.32907e-15 -316.24
+  children [
+    Pole {
+      slot [
+        TrafficLight {
+          lamp_geometry TrafficLightStandardLampGeometry {
+          }
+        }
+      ]
+    }
+  ]
+  controller "generic_traffic_light"
+  controllerArgs "30 30 r"
+}
+DEF TRAFFIC_LIGHT Robot {
+  translation 495.917 0 -315.537
+  rotation 0 1 0 4.45059
+  children [
+    Pole {
+      slot [
+        TrafficLight {
+          lamp_geometry TrafficLightStandardLampGeometry {
+          }
+        }
+      ]
+    }
+  ]
+  controller "generic_traffic_light"
+  controllerArgs "30 30 g"
+}
+DEF TRAFFIC_LIGHT Robot {
+  translation 505.849 0 -398.753
+  rotation 0 -1 0 3.40339
+  children [
+    Pole {
+      slot [
+        TrafficLight {
+          lamp_geometry TrafficLightStandardLampGeometry {
+          }
+        }
+      ]
+    }
+  ]
+  controller "generic_traffic_light"
+  controllerArgs "15 60 g"
+}
+DEF TRAFFIC_LIGHT Robot {
+  translation 401.176 1.15818e-12 -334.514
+  rotation 0 -1 0 1.83259
+  children [
+    Pole {
+      slot [
+        TrafficLight {
+          lamp_geometry TrafficLightStandardLampGeometry {
+          }
+        }
+      ]
+    }
+  ]
+  controller "generic_traffic_light"
+  controllerArgs "15 60 g"
+}
+DEF TRAFFIC_LIGHT Robot {
+  translation 390.213 1.15818e-12 -328.323
+  rotation 0 1 0 1.0472
+  children [
+    Pole {
+      slot [
+        TrafficLight {
+          lamp_geometry TrafficLightStandardLampGeometry {
+          }
+        }
+      ]
+    }
+  ]
+  controller "generic_traffic_light"
+  controllerArgs "15 60 g"
+}
+DEF TRAFFIC_LIGHT Robot {
+  translation 501.6 0 -408.249
+  rotation 0 1 0 5.75959
+  children [
+    Pole {
+      slot [
+        TrafficLight {
+          lamp_geometry TrafficLightStandardLampGeometry {
+          }
+        }
+      ]
+    }
+  ]
+  controller "generic_traffic_light"
+  controllerArgs "15 60 g"
+}
+DEF TRAFFIC_LIGHT Robot {
+  translation 495.889 0 -306.16
+  rotation 0 1 0 3.40339
+  children [
+    Pole {
+      slot [
+        TrafficLight {
+          lamp_geometry TrafficLightStandardLampGeometry {
+          }
+        }
+      ]
+    }
+  ]
+  controller "generic_traffic_light"
+  controllerArgs "30 30 r"
+}
+DEF TRAFFIC_LIGHT Robot {
+  translation 665.07 -3.55271e-15 -281.342
+  rotation 0 1 0 2.618
+  children [
+    Pole {
+      slot [
+        TrafficLight {
+          lamp_geometry TrafficLightStandardLampGeometry {
+          }
+        }
+      ]
+    }
+  ]
+  controller "generic_traffic_light"
+  controllerArgs "15 60 g"
+}
+DEF TRAFFIC_LIGHT Robot {
+  translation 592.89 -4.61853e-14 -112.281
+  rotation 0 -1 0 1.309
+  children [
+    Pole {
+      slot [
+        TrafficLight {
+          lamp_geometry TrafficLightStandardLampGeometry {
+          }
+        }
+      ]
+    }
+  ]
+  controller "generic_traffic_light"
+  controllerArgs "15 60 g"
+}
+DEF TRAFFIC_LIGHT Robot {
+  translation 588.694 -3.90799e-14 -102.973
+  rotation 0 1 0 2.09439
+  children [
+    Pole {
+      slot [
+        TrafficLight {
+          lamp_geometry TrafficLightStandardLampGeometry {
+          }
+        }
+      ]
+    }
+  ]
+  controller "generic_traffic_light"
+  controllerArgs "15 60 g"
+}
+DEF TRAFFIC_LIGHT Robot {
+  translation 659.46 -6.39488e-14 -289.298
+  rotation 0 1 0 5.75958
+  children [
+    Pole {
+      slot [
+        TrafficLight {
+          lamp_geometry TrafficLightStandardLampGeometry {
+          }
+        }
+      ]
+    }
+  ]
+  controller "generic_traffic_light"
+  controllerArgs "15 60 g"
+}
+DEF TRAFFIC_LIGHT Robot {
+  translation 488.027 -3.55271e-15 -306.413
+  rotation 0 1 0 1.5708
+  children [
+    Pole {
+      slot [
+        TrafficLight {
+          lamp_geometry TrafficLightStandardLampGeometry {
+          }
+        }
+      ]
+    }
+  ]
+  controller "generic_traffic_light"
+  controllerArgs "30 30 g"
+}
+StreetLight {
+  translation 605.341 -5.68434e-14 -158.398
+  rotation 0 1 0 1.8326
+  on FALSE
+}
+StreetLight {
+  translation 589.77 -1.56319e-13 -173.769
+  rotation 0 1 0 5.23599
+  on FALSE
+}
+StreetLight {
+  translation 590.636 -9.9476e-14 -243.971
+  rotation 0 1 0 1.0472
+  on FALSE
+}
+StreetLight {
+  translation 571.363 8.52651e-14 -219.828
+  rotation 0 1 0 4.97419
+  on FALSE
+}
+StreetLight {
+  translation 638.556 -1.98952e-13 -239.582
+  rotation 0 1 0 3.92699
+  on FALSE
+}
+StreetLight {
+  translation 716.98 -6.53699e-13 -398.99
+  rotation 0 1 0 4.18879
+  on FALSE
+}
+StreetLight {
+  translation 698.217 -6.53699e-13 -344.226
+  rotation 0 -1 0 5.23599
+  on FALSE
+}
+StreetLight {
+  translation 656.652 -1.13687e-13 -282.545
+  rotation 0 1 0 4.18879
+  on FALSE
+}
+StreetLight {
+  translation 617.557 -1.7053e-13 -216.783
+  rotation 0 1 0 0.523599
+  on FALSE
+}
+StreetLight {
+  translation 599.722 3.55271e-12 -105.375
+  rotation 0 -1 0 6.02139
+  on FALSE
+}
+StreetLight {
+  translation 679.318 1.84741e-13 -147.431
+  rotation 0 1 0 1.0472
+  on FALSE
+}
+StreetLight {
+  translation 675.128 -2.4869e-13 -201.309
+  rotation 0 1 0 2.0944
+  on FALSE
+}
+StreetLight {
+  translation 579.376 -7.24754e-13 -192.973
+  rotation 0 1 0 6.02139
+  on FALSE
+}
+StreetLight {
+  translation 566.565 -1.13687e-13 -271.495
+  rotation 0 1 0 1.0472
+  on FALSE
+}
+StreetLight {
+  translation 539.784 -1.7053e-13 -241.831
+  rotation 0 1 0 4.18879
+  on FALSE
+}
+StreetLight {
+  translation 543.127 8.52651e-14 -210.696
+  rotation 0 1 0 1.8326
+  on FALSE
+}
+StreetLight {
+  translation 554.825 2.70006e-13 -185.887
+  rotation 0 1 0 0.261799
+  on FALSE
+}
+StreetLight {
+  translation 534.273 -5.68434e-14 -177.606
+  rotation 0 1 0 0.261799
+  on FALSE
+}
+StreetLight {
+  translation 486.293 -2.84217e-13 -161.219
+  on FALSE
+}
+StreetLight {
+  translation 509.587 -2.84217e-13 -132.289
+  on FALSE
+}
+StreetLight {
+  translation 402.316 -2.84217e-14 -241.6
+  rotation 0 1 0 3.14159
+  on FALSE
+}
+StreetLight {
+  translation 369.718 -2.84217e-14 -242.606
+  rotation 0 1 0 3.14159
+  on FALSE
+}
+StreetLight {
+  translation 328.585 1.42109e-14 -239.702
+  rotation 0 1 0 3.14159
+  on FALSE
+}
+StreetLight {
+  translation 397.333 1.20792e-12 -325.341
+  rotation 0 -1 0 0.261799
+  on FALSE
+}
+StreetLight {
+  translation 464.861 1.89004e-12 -307.153
+  rotation 0 1 0 6.02139
+  on FALSE
+}
+StreetLight {
+  translation 499.165 4.61853e-12 -352.599
+  rotation 0 -1 0 4.71239
+  on FALSE
+}
+StreetLight {
+  translation 509 4.08562e-12 -405.613
+  rotation 0 -1 0 5.23599
+  on FALSE
+}
+StreetLight {
+  translation 535.411 7.00595e-12 -441.077
+  rotation 0 -1 0 5.49779
+  on FALSE
+}
+StreetLight {
+  translation 568.717 7.43938e-12 -465.488
+  rotation 0 -1 0 5.75959
+  on FALSE
+}
+StreetLight {
+  translation 605.627 2.2311e-12 -484.956
+  rotation 0 1 0 6.02139
+  on FALSE
+}
+StreetLight {
+  translation 644.143 2.2311e-12 -451.516
+  rotation 0 1 0 2.35619
+  on FALSE
+}
+StreetLight {
+  translation 658.063 2.2311e-12 -417.406
+  rotation 0 -1 0 1.5708
+  on FALSE
+}
+StreetLight {
+  translation 606.679 2.17426e-12 -394.146
+  rotation 0 -1 0 2.35619
+  on FALSE
+}
+StreetLight {
+  translation 560.199 2.089e-12 -358.342
+  rotation 0 -1 0 2.35619
+  on FALSE
+}
+StreetLight {
+  translation 529.612 2.25953e-12 -314.339
+  rotation 0 1 0 3.66519
+  on FALSE
+}
+StreetLight {
+  translation 493.55 2.17426e-12 -287.231
+  rotation 0 -1 0 1.309
+  on FALSE
+}
+StreetLight {
+  translation 430.44 0 -313.824
+  rotation 0 1 0 6.02139
+  on FALSE
+}
+StreetLight {
+  translation 329.88 4.12115e-13 -339.129
+  rotation 0 1 0 0.261799
+  on FALSE
+}
+StreetLight {
+  translation 311.895 2.41585e-13 -309.913
+  rotation 0 1 0 5.49779
+  on FALSE
+}
+StreetLight {
+  translation 324.676 8.95284e-13 -280.392
+  rotation 0 1 0 4.71239
+  on FALSE
+}
+StreetLight {
+  translation 251.885 2.81375e-12 -246.585
+  rotation 0 1 0 6.28319
+  on FALSE
+}
+StreetLight {
+  translation 97.7603 -1.19371e-12 -266.185
+  rotation 0 1 0 1.8326
+  on FALSE
+}
+StreetLight {
+  translation 191.486 -1.19371e-12 -224.619
+  on FALSE
+}
+StreetLight {
+  translation 192.438 -1.25056e-12 -223.439
+  rotation 0 -1 0 2.0944
+  on FALSE
+}
+StreetLight {
+  translation 191.089 -1.22213e-12 -223.382
+  rotation 0 -1 0 3.92699
+  on FALSE
+}
+StreetLight {
+  translation 291.339 2.25953e-12 -239.965
+  rotation 0 -1 0 0.261799
+  on FALSE
+}
+StreetLight {
+  translation 328.601 -1.42109e-14 -240.578
+  rotation 0 1 0 6.28319
+  on FALSE
+}
+StreetLight {
+  translation 433.482 4.9738e-14 -242.285
+  rotation 0 1 0 3.40339
+  on FALSE
+}
+StreetLight {
+  translation 465.373 -2.84217e-14 -250.218
+  rotation 0 1 0 3.66519
+  on FALSE
+}
+StreetLight {
+  translation 491.07 -2.84217e-14 -255.826
+  on FALSE
+}
+StreetLight {
+  translation 498.634 -2.84217e-14 -231.819
+  rotation 0 1 0 1.0472
+  on FALSE
+}
+StreetLight {
+  translation 503.103 -5.68434e-14 -193.276
+  rotation 0 1 0 1.8326
+  on FALSE
+}
+StreetLight {
+  translation 512.493 -1.13687e-13 -168.106
+  rotation 0 1 0 0.261799
+  on FALSE
+}
+PedestrianCrossing {
+  translation 503.85 -0.05 -403.75
+  rotation 0 1 0 5.91
+  size 6.8 4
+}
+PedestrianCrossing {
+  translation 91.5574 -0.05 -269.226
+  rotation 0 1 0 3.38
+  size 6.8 4
+}
+PedestrianCrossing {
+  translation 256.226 -0.05 -250.311
+  rotation 0 -1 0 1.6882
+  size 6.8 4
+}
+PedestrianCrossing {
+  translation 328.215 -0.05 -286.154
+  rotation 0 1 0 3.28599
+  size 6.8 4
+}
+PedestrianCrossing {
+  translation 398.035 -0.05 -237.441
+  rotation 0 -1 0 1.6
+  size 6.8 4
+}
+PedestrianCrossing {
+  translation 395.652 -0.05 -331.519
+  rotation 0 -1 0 1.95
+  size 7.5 4
+}
+PedestrianCrossing {
+  translation 545.744 -0.05 -326.324
+  rotation 0 1 0 5.7
+  size 7.5 4
+}
+PedestrianCrossing {
+  translation 662.276 -0.05 -410.157
+  rotation 0 -1 0 0.27
+  size 7.5 4
+}
+PedestrianCrossing {
+  translation 662.265 -0.05 -284.92
+  rotation 0 -1 0 0.4
+  size 6.8 4
+}
+PedestrianCrossing {
+  translation 564.575 -0.05 -193.443
+  rotation 0 -1 0 1.31
+  size 6.8 4
+}
+PedestrianCrossing {
+  translation 677.656 -0.05 -180.963
+  rotation 0 -1 0 6.08737
+  size 6.8 4
+}
+PedestrianCrossing {
+  translation 590.942 -0.05 -107.46
+  rotation 0 -1 0 1.33
+  size 6.8 4
+}
+PedestrianCrossing {
+  translation 526.4 -0.05 -178.688
+  rotation 0 1 0 5.17
+  size 6.8 4
+}
+YieldSign {
+  translation 537.519 -1.81899e-12 -191.486
+}
+YieldSign {
+  translation 617.067 -1.9611e-12 -488.477
+  rotation 0 -1 0 2.61799
+}
+YieldSign {
+  translation 499.745 -1.81899e-12 -262.5
+  rotation 0 1 0 3.92699
+}
+OrderSign {
+  translation -24.8932 2.06057e-13 -11.4382
+  rotation 0 -1 0 1.0472
+}
+OrderSign {
+  translation -19.8912 1.98952e-13 -3.95123
+  rotation 0 -1 0 1.0472
+}
+OrderSign {
+  translation 297.996 -1.33582e-12 -332.393
+  rotation 0 -1 0 1.0472
+  signImage [
+    "textures/stop.jpg"
+  ]
+}
+OrderSign {
+  translation -14.2989 1.98952e-13 -16.6867
+  rotation 0 -1 0 1.0472
+}
+OrderSign {
+  translation -9.19083 1.7053e-13 -9.2575
+  rotation 0 1 0 5.49779
+}
+CautionSign {
+  translation 203.081 1.85452e-12 -213.558
+  rotation 0 -1 0 2.61799
+  signImage [
+    "textures/circular_intersection.jpg"
+  ]
+}
+CautionSign {
+  translation 195.129 4.76064e-13 -239.106
+  rotation 0 -1 0 0.523599
+  signImage [
+    "textures/circular_intersection.jpg"
+  ]
+}
+CautionSign {
+  translation 313.611 4.9738e-14 -233.975
+  rotation 0 -1 0 5.23599
+  signImage [
+    "textures/circular_intersection.jpg"
+  ]
+}
+CautionSign {
+  translation 582.495 2.13163e-14 -474.131
+  rotation 0 1 0 1.8326
+  signImage [
+    "textures/right_cross_road.jpg"
+  ]
+}
+CautionSign {
+  translation 314.412 2.13163e-14 -319.871
+  rotation 0 -1 0 2.61799
+  signImage [
+    "textures/right_cross_road.jpg"
+  ]
+}
+CautionSign {
+  translation 278.553 -2.77112e-13 -333.267
+  rotation 0 -1 0 5.23599
+  signImage [
+    "textures/left_cross_road.jpg"
+  ]
+}
+CautionSign {
+  translation 103.613 0 -254.099
+  rotation 0 -1 0 2.61799
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 86.0444 7.81597e-14 -283.23
+  rotation 0 1 0 6.02139
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 239.861 0 -247.509
+  rotation 0 1 0 1.309
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 270.076 0 -252.914
+  rotation 0 -1 0 1.57079
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 379.846 -1.35003e-13 -233.366
+  rotation 0 1 0 1.309
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 682.564 -1.84741e-13 -157.184
+  rotation 0 1 0 2.618
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 665.131 -1.84741e-13 -203.094
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 570.558 -7.10543e-14 -200.027
+  rotation 0 -1 0 1.57079
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 557.535 -7.10543e-14 -187.2
+  rotation 0 1 0 1.8326
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 519.364 -7.10543e-14 -170.7
+  rotation 0 1 0 1.8326
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 547.735 -5.68434e-14 -341.379
+  rotation 0 1 0 5.49779
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 649.255 2.50111e-12 -430.998
+  rotation 0 -1 0 5.75958
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 653.721 2.40874e-12 -394.676
+  rotation 0 1 0 1.8326
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 539.067 2.84217e-14 -308.624
+  rotation 0 -1 0 4.18879
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 532.876 -7.10543e-14 -187.693
+  rotation 0 -1 0 1.57079
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 413.655 -8.52651e-14 -242.324
+  rotation 0 -1 0 1.83259
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 333.77 0 -277.138
+  rotation 0 -1 0 3.40339
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 320.299 0 -297.287
+  rotation 0 -1 0 6.02138
+  signImage [
+    "textures/pedestrian_crossing.jpg"
+  ]
+}
+CautionSign {
+  translation 323.525 -1.20792e-13 -255.801
+  rotation 0 1 0 6.02139
+  signImage [
+    "textures/circular_intersection.jpg"
+  ]
+}
+CautionSign {
+  translation 464.975 1.27365e-12 -100.397
+  rotation 0 1 0 1.5708
+  signImage [
+    "textures/cross_roads.jpg"
+  ]
+}
+CautionSign {
+  translation 498.391 1.31628e-12 -46.9855
+  rotation 0 1 0 2.35619
+  signImage [
+    "textures/cross_roads.jpg"
+  ]
+}
+CautionSign {
+  translation 537.559 2.1263e-12 -100.064
+  rotation 0 -1 0 1.5708
+  signImage [
+    "textures/cross_roads.jpg"
+  ]
+}
+CautionSign {
+  translation 667.532 2.15472e-12 -215.554
+  rotation 0 -1 0 2.61799
+  signImage [
+    "textures/cross_roads.jpg"
+  ]
+}
+CautionSign {
+  translation 650.674 2.1263e-12 -267.115
+  rotation 0 -1 0 0.261799
+  signImage [
+    "textures/cross_roads.jpg"
+  ]
+}
+CautionSign {
+  translation 502.628 -1.47438e-13 -279.226
+  rotation 0 -1 0 3.40339
+  signImage [
+    "textures/cross_roads.jpg"
+  ]
+}
+CautionSign {
+  translation 532.172 -1.19016e-13 -315.802
+  rotation 0 -1 0 1.0472
+  signImage [
+    "textures/cross_roads.jpg"
+  ]
+}
+CautionSign {
+  translation 489.518 -4.9738e-14 -348.88
+  rotation 0 1 0 6.28319
+  signImage [
+    "textures/cross_roads.jpg"
+  ]
+}
+CautionSign {
+  translation 457.537 -4.9738e-14 -308.615
+  rotation 0 -1 0 4.97419
+  signImage [
+    "textures/cross_roads.jpg"
+  ]
+}
+CautionSign {
+  translation 343.847 -4.9738e-14 -245.076
+  rotation 0 1 0 4.45059
+  signImage [
+    "textures/circular_intersection.jpg"
+  ]
+}
+CautionSign {
+  translation 334.155 -7.81597e-14 -223.982
+  rotation 0 1 0 3.14159
+  signImage [
+    "textures/circular_intersection.jpg"
+  ]
+}
+CautionSign {
+  translation 12.4178 -7.81597e-14 -8.76796
+  rotation 0 1 0 3.14159
+  signImage [
+    "textures/circular_intersection.jpg"
+  ]
+}
+CautionSign {
+  translation -11.0922 2.84217e-14 -7.35775
+  rotation 0 1 0 1.5708
+  signImage [
+    "textures/circular_intersection.jpg"
+  ]
+}
+CautionSign {
+  translation -12.3222 1.42109e-14 -32.0076
+  rotation 0 1 0 0.523599
+  signImage [
+    "textures/circular_intersection.jpg"
+  ]
+}
+CautionSign {
+  translation 14.0224 -4.26499e-14 -34.1325
+  rotation 0 1 0 5.23599
+  signImage [
+    "textures/circular_intersection.jpg"
+  ]
+}
+SpeedLimitSign {
+  translation -47.2334 0 -4.28668
+  rotation 0 1 0 1.8326
+}
+SpeedLimitSign {
+  translation -47.6469 0 4.16928
+  rotation 0 1 0 1.309
+}
+SpeedLimitSign {
+  translation 61.0646 0 -386.436
+  rotation 0 1 0 3.92699
+  signImage [
+    "textures/speed_limit_80.png"
+  ]
+}
+SpeedLimitSign {
+  translation 54.1547 0 -380.584
+  rotation 0 1 0 4.18879
+  signImage [
+    "textures/speed_limit_80.png"
+  ]
+}
+SpeedLimitSign {
+  translation 172.346 0 -226.192
+  rotation 0 -1 0 1.5708
+  signImage [
+    "textures/speed_limit_60.png"
+  ]
+}
+SpeedLimitSign {
+  translation 540.221 -4.61853e-14 -91.9488
+  rotation 0 -1 0 4.71239
+  signImage [
+    "textures/speed_limit_30.png"
+  ]
+}
+SpeedLimitSign {
+  translation 737.182 4.47642e-13 -441.854
+  rotation 0 1 0 5.49779
+  signImage [
+    "textures/speed_limit_40.png"
+  ]
+}
+SpeedLimitSign {
+  translation 633.461 1.66978e-13 -236.468
+  rotation 0 1 0 5.23599
+  signImage [
+    "textures/speed_limit_20.png"
+  ]
+}
+SpeedLimitSign {
+  translation 494.922 1.81188e-13 -249.8
+  rotation 0 -1 0 6.02139
+  signImage [
+    "textures/speed_limit_20.png"
+  ]
+}
+SpeedLimitSign {
+  translation 309.108 2.0961e-13 -312.018
+  rotation 0 -1 0 6.02139
+  signImage [
+    "textures/speed_limit_30.png"
+  ]
+}
+SpeedLimitSign {
+  translation 209.987 2.94875e-13 -242.927
+  rotation 0 1 0 1.8326
+  signImage [
+    "textures/speed_limit_30.png"
+  ]
+}
+SpeedLimitSign {
+  translation 201.326 1.38556e-13 -200.603
+  rotation 0 1 0 0.523599
+}
+SpeedLimitSign {
+  translation 171.237 0 -218.041
+  rotation 0 -1 0 1.5708
+  signImage [
+    "textures/speed_limit_60.png"
+  ]
+}
+SimpleTree {
+  translation 203.27 0 -310.29
+  rotation 0 1 0 1.467
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 205.4 0 -300.58
+  rotation 0 1 0 4.805
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 162.46 0 -245.79
+  rotation 0 1 0 3.519
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 136.27 0 -258.61
+  rotation 0 1 0 3.473
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 175.95 0 -247.73
+  rotation 0 1 0 2.548
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 191.13 0 -253.56
+  rotation 0 1 0 3.121
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 201.2 0 -263.28
+  rotation 0 1 0 3.429
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 190.94 0 -314.18
+  rotation 0 1 0 1.133
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 137.22 0 -271.05
+  rotation 0 1 0 1.644
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 205.43 0 -272.21
+  rotation 0 1 0 1.545
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 176.88 0 -315.73
+  rotation 0 1 0 4.22
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 207.27 0 -285.04
+  rotation 0 1 0 5.874
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 103.514 3.97904e-13 74.9102
+  rotation 0 1 0 1.88
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 82.4667 1.13687e-13 72.4741
+  rotation 0 1 0 3.782
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 87.9107 0 51.9145
+  rotation 0 1 0 5.893
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 121.689 -2.72848e-12 52.1518
+  rotation 0 1 0 0.398
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 106.917 -1.7053e-13 52.0596
+  rotation 0 1 0 4.915
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 139.133 2.27374e-13 72.7128
+  rotation 0 1 0 3.476
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 155.856 5.68434e-14 68.7428
+  rotation 0 1 0 3.858
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 173.991 0 66.7765
+  rotation 0 1 0 0.123
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 123.611 -1.7053e-13 73.0305
+  rotation 0 1 0 4.001
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 152.572 -1.7053e-13 48.3896
+  rotation 0 1 0 1.003
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 137.691 5.68434e-14 51.1427
+  rotation 0 1 0 4.427
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 167.772 0 46.6657
+  rotation 0 1 0 1.092
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 192.801 -3.97904e-13 64.1694
+  rotation 0 1 0 2.771
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 182.986 -5.68434e-14 44.9121
+  rotation 0 1 0 1.145
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 567.12 0 -537.5
+  rotation 0 1 0 5.123
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 575.75 0 -537.23
+  rotation 0 1 0 5.973
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 575.72 0 -528.44
+  rotation 0 1 0 6.049
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 573.49 0 -523.35
+  rotation 0 1 0 3.952
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 581.44 0 -524.73
+  rotation 0 1 0 6.054
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 582.19 0 -531.18
+  rotation 0 1 0 4.177
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 583.66 0 -520.47
+  rotation 0 1 0 4.468
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 536.45 0 -469.09
+  rotation 0 1 0 4.863
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 534.35 0 -479.53
+  rotation 0 1 0 2.405
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 546.3 0 -480.35
+  rotation 0 1 0 2.875
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 545.35 0 -475.27
+  rotation 0 1 0 5.943
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 548.95 0 -487.36
+  rotation 0 1 0 2.632
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 559.63 0 -488.18
+  rotation 0 1 0 4.473
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 556.52 0 -475.82
+  rotation 0 1 0 4.779
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 554.95 0 -481.88
+  rotation 0 1 0 0.441
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 551.34 0 -495.48
+  rotation 0 1 0 0.921
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 563.7 0 -514.81
+  rotation 0 1 0 0.725
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 571.04 0 -491.01
+  rotation 0 1 0 5.321
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 564.15 0 -508.11
+  rotation 0 1 0 0.04
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 582.23 0 -497.62
+  rotation 0 1 0 0.307
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 571.35 0 -515.78
+  rotation 0 1 0 1.731
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 562.98 0 -497.54
+  rotation 0 1 0 1.72
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 572.4 0 -503.17
+  rotation 0 1 0 6.137
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 573.15 0 -507.83
+  rotation 0 1 0 1.985
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 587.41 0 -506.96
+  rotation 0 1 0 2.408
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 575.47 0 -516.9
+  rotation 0 1 0 5.186
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 676.63 0 -493.88
+  rotation 0 1 0 0.624
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 764.74 0 -430.28
+  rotation 0 1 0 1.868
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 632.53 0 -277.89
+  rotation 0 1 0 5.92
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 644.47 0 -294.16
+  rotation 0 1 0 4.222
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 629.15 0 -302.3
+  rotation 0 1 0 5.712
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 615.08 0 -285.29
+  rotation 0 1 0 5.733
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 498.353 5.68434e-14 -84.161
+  rotation 0 1 0 2.013
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 496.551 -1.42109e-14 -75.4114
+  rotation 0 1 0 2.297
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 491.412 -1.47793e-12 -62.969
+  rotation 0 1 0 2.129
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 485.263 -8.52651e-14 -51.9109
+  rotation 0 1 0 1.878
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 474.096 -1.73372e-12 -33.4678
+  rotation 0 1 0 1.084
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 466.853 -2.27374e-13 -26.1576
+  rotation 0 1 0 1.084
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 457.595 -2.16005e-12 -18.7436
+  rotation 0 1 0 1.084
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 447.478 -2.55795e-13 -13.1687
+  rotation 0 1 0 1.084
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 482.219 1.98952e-12 -42.9276
+  rotation 0 1 0 1.084
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 438.638 0 -10.2945
+  rotation 0 1 0 2.534
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 427.869 -1.33582e-12 -5.8612
+  rotation 0 1 0 0.777
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 416.669 -1.13687e-13 -1.66085
+  rotation 0 1 0 1.533
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 405.952 -2.84217e-14 1.88355
+  rotation 0 1 0 6.181
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 385.927 0 8.78848
+  rotation 0 1 0 1.283
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 373.367 0 12.0318
+  rotation 0 1 0 1.283
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 362.715 0 13.7074
+  rotation 0 1 0 1.283
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 350.864 0 17.1771
+  rotation 0 1 0 1.283
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 341.015 0 19.9759
+  rotation 0 1 0 1.283
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 328.586 0 22.6321
+  rotation 0 1 0 1.283
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 316.965 0 25.2494
+  rotation 0 1 0 1.283
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 304.158 0 27.8909
+  rotation 0 1 0 1.283
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 291.692 0 30.3159
+  rotation 0 1 0 1.283
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 279.51 0 32.2133
+  rotation 0 1 0 1.283
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 250.807 0 39.0784
+  rotation 0 1 0 1.283
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 395.455 0 5.40895
+  rotation 0 1 0 1.283
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 279.071 0 52.9049
+  rotation 0 1 0 5.543
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 253.028 0 57.7545
+  rotation 0 1 0 1.316
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 267.769 0 54.1972
+  rotation 0 1 0 4.189
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 264.939 0 34.5393
+  rotation 0 1 0 5.077
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 236.879 0 38.9694
+  rotation 0 1 0 4.072
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 223.358 0 40.1255
+  rotation 0 1 0 5.027
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 211.57 -3.69482e-12 42.0242
+  rotation 0 1 0 1.689
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 199.981 5.68434e-14 44.0858
+  rotation 0 1 0 4.939
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 512.264 1.42109e-14 -83.024
+  rotation 0 1 0 4.448
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 510.84 8.52651e-14 -72.2727
+  rotation 0 1 0 0.076
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 507.611 7.10543e-14 -58.4498
+  rotation 0 1 0 5.451
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 498.053 0 -37.4653
+  rotation 0 1 0 1.531
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 490.685 -5.68434e-14 -26.8351
+  rotation 0 1 0 1.531
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 482.952 -1.3074e-12 -19.3345
+  rotation 0 1 0 1.531
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 473.261 2.84217e-14 -12.079
+  rotation 0 1 0 1.531
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 462.21 1.87583e-12 -5.1141
+  rotation 0 1 0 1.531
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 451.894 -2.84217e-14 0.99296
+  rotation 0 1 0 1.531
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 503.533 0 -47.8889
+  rotation 0 1 0 1.531
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 431.581 0 10.7009
+  rotation 0 1 0 2.988
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 442.542 0 5.62268
+  rotation 0 1 0 1.456
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 423.515 0 12.8996
+  rotation 0 1 0 4.947
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 412.509 0 17.572
+  rotation 0 1 0 4.38
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 398.832 0 21.3523
+  rotation 0 1 0 4.929
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 387.412 0 24.81
+  rotation 0 1 0 5.536
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 363.585 0 33.3836
+  rotation 0 1 0 1.697
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 376.784 0 30.121
+  rotation 0 1 0 0.158
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 351.043 0 36.9973
+  rotation 0 1 0 3.489
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 337.58 0 40.0737
+  rotation 0 1 0 5.745
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 322.143 0 43.9742
+  rotation 0 1 0 3.051
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 304.562 0 48.916
+  rotation 0 1 0 3.123
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 291.948 0 50.5034
+  rotation 0 1 0 3.251
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 238.228 3.63798e-12 57.0518
+  rotation 0 1 0 2.285
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 223.524 4.718e-12 59.066
+  rotation 0 1 0 2.834
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 209.997 -4.20641e-12 61.9069
+  rotation 0 1 0 0.245
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 444.19 0 -250.37
+  rotation 0 1 0 5.498
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 436.72 0 -255.59
+  rotation 0 1 0 1.223
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 425.6 0 -260.82
+  rotation 0 1 0 1.954
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 411.61 0 -260.82
+  rotation 0 1 0 2.356
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 399.68 0 -253.5
+  rotation 0 1 0 3.262
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 373.14 0 -283.83
+  rotation 0 1 0 2.821
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 373.93 0 -296.9
+  rotation 0 1 0 4.586
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 349 0 -315.2
+  rotation 0 1 0 5.396
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 355.38 0 -324.61
+  rotation 0 1 0 1.603
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 261.6 0 -257
+  rotation 0 1 0 5.995
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 306.62 0 -290.63
+  rotation 0 1 0 4.344
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 462.96 0 -172.1
+  rotation 0 1 0 4.006
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 432.61 0 -170.01
+  rotation 0 1 0 4.216
+  type "hackberry tree"
+  subdivision 4
+}
+SimpleTree {
+  translation 587.19 0 -130.28
+  rotation 0 1 0 2.019
+  type "hackberry tree"
+  subdivision 4
+}
+DEF RIVER Transform {
+  translation 97.11 -0.5 -205.58
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 0 1
+        }
+      }
+      geometry Extrusion {
+        crossSection [
+          -1 0
+          -1 0.5
+          1 0.5
+          1 0
+          -1 0
+        ]
+        spine [
+          0 0 0
+          9.02 0 -10.67
+          18.76 0 -15.62
+          23.3 0 -23.31
+          26.07 0 -28.81
+          33.36 0 -38.15
+          44.44 0 -41.44
+          61 0 -50
+        ]
+        splineSubdivision 8
+      }
+    }
+  ]
+}
+Forest {
+  treesFiles [
+    "forest/village/-3754.forest"
+  ]
+}
+DEF farmland Shape {
+  appearance Appearance {
+    material Material {
+      diffuseColor 0 0 0
+    }
+    texture ImageTexture {
+      url [
+        "textures/dry_grass.jpg"
+      ]
+    }
+    textureTransform TextureTransform {
+      scale 92 92
+    }
+  }
+  geometry IndexedFaceSet {
+    coord Coordinate {
+      point [
+        98.59 0 14.24
+        183.3 0 1.86
+        176.43 0 -28.03
+        91.72 0 -15.64
+        98.59 0 14.24
+      ]
+    }
+    coordIndex [
+      0, 1, 2, 3, 4, -1
+    ]
+  }
+}
+DEF farmland Shape {
+  appearance Appearance {
+    material Material {
+      diffuseColor 0 0 0
+    }
+    texture ImageTexture {
+      url [
+        "textures/dry_grass.jpg"
+      ]
+    }
+    textureTransform TextureTransform {
+      scale 74 74
+    }
+  }
+  geometry IndexedFaceSet {
+    coord Coordinate {
+      point [
+        233.07 0 -8.25
+        230.63 0 -82.46
+        195.38 0 -82.46
+        197.82 0 -8.25
+        233.07 0 -8.25
+      ]
+    }
+    coordIndex [
+      0, 1, 2, 3, 4, -1
+    ]
+  }
+}
+DEF farmland Shape {
+  appearance Appearance {
+    material Material {
+      diffuseColor 0 0 0
+    }
+    texture ImageTexture {
+      url [
+        "textures/dry_grass.jpg"
+      ]
+    }
+    textureTransform TextureTransform {
+      scale 74 74
+    }
+  }
+  geometry IndexedFaceSet {
+    coord Coordinate {
+      point [
+        289.61 0 0.54
+        287.17 0 -73.67
+        251.92 0 -73.67
+        254.36 0 0.54
+        289.61 0 0.54
+      ]
+    }
+    coordIndex [
+      0, 1, 2, 3, 4, -1
+    ]
+  }
+}
+DEF farmland Shape {
+  appearance Appearance {
+    material Material {
+      diffuseColor 0 0 0
+    }
+    texture ImageTexture {
+      url [
+        "textures/dry_grass.jpg"
+      ]
+    }
+    textureTransform TextureTransform {
+      scale 74 74
+    }
+  }
+  geometry IndexedFaceSet {
+    coord Coordinate {
+      point [
+        341.74 0 -8.25
+        339.29 0 -82.46
+        304.04 0 -82.46
+        306.48 0 -8.25
+        341.74 0 -8.25
+      ]
+    }
+    coordIndex [
+      0, 1, 2, 3, 4, -1
+    ]
+  }
+}
+DEF farmland Shape {
+  appearance Appearance {
+    material Material {
+      diffuseColor 0 0 0
+    }
+    texture ImageTexture {
+      url [
+        "textures/dry_grass.jpg"
+      ]
+    }
+    textureTransform TextureTransform {
+      scale 74 74
+    }
+  }
+  geometry IndexedFaceSet {
+    coord Coordinate {
+      point [
+        400.02 0 -18.15
+        397.57 0 -92.36
+        362.32 0 -92.36
+        364.76 0 -18.15
+        400.02 0 -18.15
+      ]
+    }
+    coordIndex [
+      0, 1, 2, 3, 4, -1
+    ]
+  }
+}
+Forest {
+  treesFiles [
+    "forest/village/-3623.forest"
+  ]
+}
+Forest {
+  treesFiles [
+    "forest/village/-3494.forest"
+  ]
+}
+DEF water Shape {
+  appearance Appearance {
+    material Material {
+      diffuseColor 0 0 1
+    }
+  }
+  geometry IndexedFaceSet {
+    coord Coordinate {
+      point [
+        407.51 0 -127.01
+        426.01 0 -141.77
+        385.75 0 -183.93
+        365.84 0 -170.91
+        407.51 0 -127.01
+      ]
+    }
+    coordIndex [
+      0, 1, 2, 3, 4, -1
+    ]
+  }
+}
+Forest {
+  treesFiles [
+    "forest/village/-2002.forest"
+  ]
+}
+Forest {
+  treesFiles [
+    "forest/village/-1887.forest"
+  ]
+}
+DEF water Shape {
+  appearance Appearance {
+    material Material {
+      diffuseColor 0 0 1
+    }
+  }
+  geometry IndexedFaceSet {
+    coord Coordinate {
+      point [
+        173.35 0 -281.39
+        169.94 0 -275.17
+        161.04 0 -270.9
+        151.6 0 -269.34
+        145.87 0 -265.07
+        147.02 0 -257.69
+        155.73 0 -253.8
+        167.04 0 -253.41
+        177.41 0 -254.19
+        184.53 0 -257.69
+        194.28 0 -263.52
+        198.53 0 -271.68
+        200.42 0 -282.94
+        199.26 0 -290.72
+        196.62 0 -302.37
+        188.29 0 -308.2
+        177.02 0 -307.42
+        171.79 0 -301.59
+        170.23 0 -293.82
+        175.38 0 -288.38
+        173.35 0 -281.39
+      ]
+    }
+    coordIndex [
+      0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+      10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+      20, -1
+    ]
+  }
+}
+DEF water Shape {
+  appearance Appearance {
+    material Material {
+      diffuseColor 0 0 1
+    }
+  }
+  geometry IndexedFaceSet {
+    coord Coordinate {
+      point [
+        97.11 0 -205.58
+        90.27 0 -213.12
+        75.03 0 -217.24
+        58.88 0 -219.34
+        41.63 0 -215.68
+        32.69 0 -204.57
+        27.99 0 -190.81
+        24.12 0 -176.6
+        25.24 0 -164.39
+        33.54 0 -151.34
+        47.63 0 -143.41
+        70.02 0 -141.63
+        93.63 0 -146.52
+        98.82 0 -152.76
+        101.2 0 -155.62
+        109.97 0 -163.78
+        112.83 0 -173.1
+        111.23 0 -180.48
+        106.89 0 -188.64
+        106.57 0 -198.36
+        97.11 0 -205.58
+      ]
+    }
+    coordIndex [
+      0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+      10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+      20, -1
+    ]
+  }
+}

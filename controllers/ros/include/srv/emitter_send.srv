@@ -1,0 +1,4 @@
+char[] data
+int32 size
+---
+int8 success
